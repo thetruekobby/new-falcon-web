@@ -4,11 +4,11 @@
 
 :root {
   --clr-text-secondary: theme(colors.gray.600);
+  --clr-bg-gray: theme(colors.gray.100);
 }
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -19,7 +19,7 @@ body {
 }
 
 .img-outline-right,
-.img-outline-right {
+.img-outline-left {
   position: relative;
 }
 
@@ -74,4 +74,49 @@ body {
 
 .animate-slide-in2 {
   animation: slide-in2 6s ease-out;
+}
+
+.methodology-card {
+  @apply relative bg-white rounded shadow border col-span-11 sm:col-span-4 lg:col-span-4 flex flex-col gap-3 items-center py-16;
+}
+.methodology-card::before {
+  @apply w-full block h-3 top-0 left-0 bg-black;
+}
+
+section > h1 {
+  @apply font-bold text-2xl text-center;
+}
+
+.contact-card {
+  @apply flex-1 p-3;
+}
+
+.contact-card:not(:last-child) {
+  @apply border-b md:border-b-0 md:border-r border-[var(--clr-text-secondary)];
+}
+
+.contact-card-header {
+  @apply flex items-center gap-2;
+}
+.contact-card-header h2 {
+  @apply font-bold text-lg;
+}
+.contact-card > p:last-child {
+  @apply text-lg font-medium;
+}
+
+.form-label {
+  @apply block mt-3 capitalize;
+}
+
+.form-label::after {
+  content: "*";
+  @apply text-red-700;
+}
+.form-input {
+  @apply outline-none border h-10 mt-3  px-3 w-full;
+}
+
+.error {
+  @apply text-red-700 text-xs;
 }

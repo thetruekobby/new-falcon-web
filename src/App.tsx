@@ -1,5 +1,8 @@
-import Header from "./components/Header";
-import NavBar from "./components/NavBar";
+import BTMethodology from "./BTMethodology"
+import BTServices from "./BTServices"
+import ContactUs from "./ContactUs"
+import Header from "./components/Header"
+import NavBar from "./components/NavBar"
 
 const App = () => {
   return (
@@ -8,11 +11,20 @@ const App = () => {
         <NavBar />
         <Header />
       </div>
-      <div className="h-screen">
+      {/* <div className="h-screen">
         <p>aa</p>
+      </div> */}
+      <div className="">
+        <BTMethodology />
+      </div>
+      <div className="">
+        <BTServices />
+      </div>
+      <div className="">
+        <ContactUs/>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App
