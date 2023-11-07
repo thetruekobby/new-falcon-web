@@ -5,9 +5,10 @@ const NavBar = () => {
   const navOptions = ["home", "about us", "services", "portfolio", "contact us"]
 
   return (
-    <nav className="flex justify-between mb-10 py-5 pb-0">
-      <div className="">
-        <img src="/img/brand/logoOnly.png" alt="logo" className="object-contain h-20" />
+    <nav className="flex justify-between mb-10">
+      <div className="flex flex-row items-center">
+        <img src="/img/brand/logoOnly.png" alt="logo" className="object-contain h-20 w-20" />
+        <span className="text-2xl font-bold">Falcon Technologies</span>
       </div>
       <ul className="flex items-center gap-5 capitalize ">
         {navOptions.map((option, index) => (
