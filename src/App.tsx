@@ -4,7 +4,7 @@ import NavBar from "./components/NavBar";
 const App = () => {
   return (
     <div className="container-full bg-white">
-      <div className="h-auto">
+      <div className="h-screen bg-gray-100">
         <NavBar />
         <Header />
       </div>
