@@ -8,7 +8,9 @@ const App = () => {
         <NavBar />
         <Header />
       </div>
-      <div>akk</div>
+      <div className="h-screen">
+        <p>aa</p>
+      </div>
     </div>
   );
 };
