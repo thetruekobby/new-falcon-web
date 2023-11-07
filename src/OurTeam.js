@@ -8,7 +8,13 @@ const OurTeam = () => {
       <div className="">
         {ourTeam.teams.map((member, index) => (
           <div key={index}>
-            <img src={member.image} alt="" />
+            <div className="">
+              <img src={member.image} alt="" />
+            </div>
+            <div className="">
+              <p className="">{member.position}</p>
+              <p className="">{member.profile}</p>
+            </div>
           </div>
         ))}
       </div>

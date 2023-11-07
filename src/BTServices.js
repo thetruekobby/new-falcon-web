@@ -51,7 +51,7 @@ const BTServices = () => {
           </div>
         </div>
         <div className="img-outline-left flex-1 order-first animate-slide-in2 z-10">
-          <img src="/bg/banner_bg.jpg" alt="" className="w-full" />
+          <img src="/img/stock/ussd2.jpg" alt="" className="w-full object-cover" />
         </div>
       </div>
     </section>

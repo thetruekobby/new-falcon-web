@@ -3,7 +3,7 @@ import { useEffect,useRef } from 'react'
 
 const NavBar = () => {
   const navOptions = [
-    { label: "home", id: "index" },
+    { label: "home", id: "hero" },
     { label: "about us", id: "about" },
     { label: "services", id: "services" },
     { label: "portfolio", id: "portfolio" },
