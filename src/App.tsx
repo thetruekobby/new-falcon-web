@@ -4,7 +4,7 @@ import NavBar from "./components/NavBar";
 const App = () => {
   return (
     <div className="container-full">
-      <div className="h-auto p-10">
+      <div className="h-auto">
         <NavBar />
         <Header />
       </div>

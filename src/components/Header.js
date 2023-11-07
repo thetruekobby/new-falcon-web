@@ -1,6 +1,6 @@
 const Header = () => {
   return (
-    <div className="flex flex-col md:flex-row gap-5 items-center pr-3">
+    <div className="flex flex-col md:flex-row gap-5 items-center px-12 pr-14 py-5">
       <div className="flex-[1] lg:flex-1 order-last md:order-first animate-slide-in">
         <h1 className="capitalize font-bold text-6xl mb-4">software solutions for ambitious ideas</h1>
         <h2 className="font-semibold text-[var(--clr-text-secondary)] text-lg mb-4">
