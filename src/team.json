@@ -5,21 +5,22 @@
       "image":"/img/team/james.jpeg",
       "name": "Benjamin Mensah",
       "position": "Project Manager",
-      "profile": "Detail description of work experience"
+      "profile": "Benjamin Mensah is a seasoned professional with an extensive 20-year career within the ICT (Information and Communications Technology) sector, holding pivotal roles across various esteemed organizations.",
+      "employment":"2 years"
     },
     {
       "id": 2,
       "image":"/img/team/james.jpeg",
       "name": "James Amo",
       "position": "Backend Team Lead",
-      "profile": "Detail description of work experience"
+      "profile": "James Amo is a highly experienced Full Stack Developer with an extensive career spanning over a decade within the ICT (Information and Communications Technology) sector. He has held diverse roles primarily focusing on software development, systems integration, and business intelligence across various international locations."
     },
     {
       "id": 3,
       "image":"/img/team/thomas.jpeg",
       "name": "Thomas Davis",
       "position": "Frontend Team Lead",
-      "profile": "Detail description of work experience"
+      "profile": "Thomas Davis is a highly experienced Full Stack Developer with an expertise in Mobile & Web Portals applications development using React-Native for Android and iOS, and web development with ReactJS, NextJS, Bootstrap, and UI-UX design. His career spans across diverse roles focusing primarily on full-stack development."
     },
     {
       "id": 4,

@@ -1,5 +1,6 @@
 import AboutUs from "./AboutUs"
 import BTMethodology from "./BTMethodology"
+import BTPortfolio from "./BTPortfolio"
 import BTServices from "./BTServices"
 import ContactUs from "./ContactUs"
 import Footer from "./components/Footer"
@@ -16,6 +17,8 @@ const App = () => {
       <AboutUs />
       <BTServices/>
       <BTMethodology/>
+      <BTPortfolio/>
+      
       <ContactUs/>
       <Footer />
     </div>

@@ -13,11 +13,11 @@ const BTMethodology = () => {
         </div>
         <div className="methodology-card">
           <PiListChecksBold size={30} />
-          <h1 className="font-bold">Requirement Analysis</h1>
+          <h1 className="font-bold">Planning</h1>
         </div>
         <div className="methodology-card">
           <PiListChecksBold size={30} />
-          <h1 className="font-bold">Requirement Analysis</h1>
+          <h1 className="font-bold">Design</h1>
         </div>
       </div>
 
