@@ -7,7 +7,7 @@ const AboutUs = () => {
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row gap-5 pr-4 py-14 pt-20">
           <div className="flex-[1] lg:flex-1 order-last md:order-first animate-slide-in">
-            <h1 className="capitalize font-bold text-2xl mb-4">About Us</h1>
+            <h1 className="section-title mb-4">About Us</h1>
             <div className="space-y-6 text-lg">
               <p>
                 Falcon Technologies Web Development is a forward-thinking web
@@ -22,15 +22,15 @@ const AboutUs = () => {
               </p>
             </div>
           </div>
-          <div className="img-outline-right flex-1 order-first md:order-last animate-slide-in2 z-10">
+          <div className="flex-1 order-first md:order-last animate-slide-in2 z-10">
             <img src="/bg/banner_bg.jpg" alt="" className="w-full" />
           </div>
         </div>
         <div className="p-12  animate-slide-in2">
-          <h1 className="capitalize font-bold text-2xl mb-4 text-center">
+          <h1 className="section-title text-center mb-14">
             Meet Our Team
           </h1>
-          <div className="flex flex-row justify-center items-center space-x-10">
+          <div className="flex flex-row justify-center mt-5 items-center space-x-10">
             {ourTeam.teams.map((team, i) => (
               <div className="bg-white border rounded-lg overflow-hidden cursor-pointer hover:shadow-md">
                 <div className="">

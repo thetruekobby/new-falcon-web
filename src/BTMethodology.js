@@ -4,7 +4,7 @@ import { PiListChecksBold } from "react-icons/pi"
 const BTMethodology = () => {
   return (
     <section className="bg-[var(--clr-bg-gray)] px-4 py-5">
-      <h1>Our Methodology</h1>
+      <h1 className="section-title mb-7">Our Methodology</h1>
 
       <div className="grid grid-cols-12 gap-5">
         <div className="methodology-card">

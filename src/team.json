@@ -1,35 +1,34 @@
 {
-    "teams": [
-      {
-        "id": 1,
-        "name": "John Doe",
-        "position": "john@example.com",
-        "profile":"Detail description of work experience"
-      },
-      {
-        "id": 2,
-        "name": "Jane Smith",
-        "position": "jane@example.com",
-        "profile":"Detail description of work experience"
-      },
-      {
-        "id": 3,
-        "name": "Jane Smith",
-        "position": "jane@example.com",
-        "profile":"Detail description of work experience"
-      },
-      {
-        "id": 4,
-        "name": "Jane Smith",
-        "position": "jane@example.com",
-        "profile":"Detail description of work experience"
-      },
-      {
-        "id": 5,
-        "name": "Jane Smith",
-        "position": "jane@example.com",
-        "profile":"Detail description of work experience"
-      }
-    ]
-  }
-  
+  "teams": [
+    {
+      "id": 1,
+      "name": "Benjamin Mensah",
+      "position": "Project Manager",
+      "profile": "Detail description of work experience"
+    },
+    {
+      "id": 2,
+      "name": "James Amoh",
+      "position": "Backend Team Lead",
+      "profile": "Detail description of work experience"
+    },
+    {
+      "id": 3,
+      "name": "Thomas Davis",
+      "position": "Frontend Team Lead",
+      "profile": "Detail description of work experience"
+    },
+    {
+      "id": 4,
+      "name": "Aziz Adams",
+      "position": "Backend Engineer",
+      "profile": "Detail description of work experience"
+    },
+    {
+      "id": 5,
+      "name": "John Tanko",
+      "position": "Frontend Engineer",
+      "profile": "Detail description of work experience"
+    }
+  ]
+}
