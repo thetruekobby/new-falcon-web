@@ -43,10 +43,10 @@ const ContactUs = () => {
    }
 
   return (
-    <section>
+    <section id="contact" className="pt-7 container mx-auto">
       <h1>Contact Us</h1>
 
-      <p className="text-center my-5 text-[var(--clr-text-secondary)]">
+      <p className="text-center my-5 text-[var(--clr-text-secondary)] text-lg">
         Meet us at a Cyberteq office near you or reach us electronically. Our experts will help you to choose the proper solution for your
         organization and answer all questions related to Cybersecurity, Digital Transformation & Telecommunication.
       </p>

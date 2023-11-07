@@ -3,7 +3,7 @@ import ourTeam from "./team.json";
 
 const AboutUs = () => {
   return (
-    <div className="bg-gray-50">
+    <section id="about" className="bg-gray-50">
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row gap-5 pr-4 py-14 pt-20">
           <div className="flex-[1] lg:flex-1 order-last md:order-first animate-slide-in">
@@ -36,12 +36,12 @@ const AboutUs = () => {
                 <div className="">
                   <div className="md:flex-shrink-0">
                     <img
-                      src="/bg/banner_bg.jpg"
+                      src={team.image}
                       alt="Profile"
                       className="w-full h-48 object-cover md:w-48"
                     />
                   </div>
-                  <div className="p-3">
+                  <div className="p-3 text-center">
                     <h2 className="block mt-1 text-lg leading-tight font-medium text-black">
                       {team.name}
                     </h2>
@@ -54,11 +54,11 @@ const AboutUs = () => {
             ))}
           </div>
           <div className="flex justify-center">
-            <button className="btn-primary mt-6">Read more...</button>
+            <button className="btn-primary mt-6">Read more</button>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

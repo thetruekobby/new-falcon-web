@@ -3,8 +3,8 @@ import React from "react"
 const BTServices = () => {
   return (
     <section id="services" className="container mx-auto py-8">
-      <h1 className="section-title">Our Services</h1>
-      <div className="flex flex-col md:flex-row gap-5 items-start px-12 pr-14 py-14 pt-20">
+      <h1 className="section-title mb-14">Our Services</h1>
+      <div className="flex flex-col md:flex-row gap-5 items-start px-12 pr-14">
         <div className="flex-[2] lg:flex-[2] order-last animate-slide-in">
           <div className="">
             <h2 className="section-subtitle">Fintech solutions</h2>
@@ -43,9 +43,10 @@ const BTServices = () => {
           <div className="">
             <h2 className="section-subtitle mb-4">USSD Technology</h2>
             <p>
-              Falcon Technologies USSD Developer is a leading USSD development company that thrives on innovation and technical excellence. <br /><br /> With a
-              deep understanding of USSD technology, we create interactive and efficient USSD solutions. <br /><br /> Our team of USSD experts brings a wealth of
-              experience in developing USSD applications across various sectors, including finance, healthcare, education, and more.
+              Falcon Technologies USSD Developer is a leading USSD development company that thrives on innovation and technical excellence. <br />
+              <br /> With a deep understanding of USSD technology, we create interactive and efficient USSD solutions. <br />
+              <br /> Our team of USSD experts brings a wealth of experience in developing USSD applications across various sectors, including finance,
+              healthcare, education, and more.
             </p>
           </div>
         </div>
