@@ -15,7 +15,7 @@ body {
 }
 
 .btn-primary {
-  @apply bg-black/90 hover:bg-black/100 cursor-pointer select-none text-white font-semibold capitalize p-2 rounded whitespace-nowrap;
+  @apply bg-black/90 hover:bg-black/100 cursor-pointer select-none text-white font-semibold capitalize p-2 rounded whitespace-nowrap px-5;
 }
 
 .img-outline-right,
