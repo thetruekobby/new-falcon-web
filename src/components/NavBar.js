@@ -5,7 +5,7 @@ const NavBar = () => {
   const navOptions = ["home", "about us", "services", "portfolio", "contact us"]
 
   return (
-    <nav className="flex justify-between px-12 py-3 bg-white sticky top-0 z-50">
+    <nav className="flex justify-between px-12 py-3 bg-white sticky top-0 z-50 border-b border-gray-100">
       <div className="flex flex-row items-center">
         <img src="/img/brand/logoOnly.png" alt="logo" className="object-contain h-20 w-20" />
         <span className="text-2xl font-bold">Falcon Technologies</span>
