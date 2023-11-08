@@ -12,7 +12,7 @@ const Footer = () => {
         </div>
         <div className="w-full sm:w-1/2 md:w-1/3 mb-4">
           <ul className="space-y-3">
-            <Link className="font-bold">Services</Link>
+            <li className="font-bold">Services</li>
             <Link
               className="block cursor-pointer"
               activeClass="active"
@@ -59,7 +59,7 @@ const Footer = () => {
         </div>
         <div className="w-full sm:w-1/2 md:w-1/3 mb-4">
           <ul className="space-y-3">
-            <Link className="font-bold">Quick Links</Link>
+            <li className="font-bold">Quick Links</li>
             <Link
               className="block cursor-pointer"
               activeClass="active"

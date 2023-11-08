@@ -2,7 +2,7 @@
   "teams": [
     {
       "id": 1,
-      "image": "/img/team/mensah.jpg",
+      "image": "/img/team/bm.jpg",
       "name": "Benjamin Mensah",
       "position": "Project Manager",
       "profile": "Benjamin Mensah is a seasoned professional with an extensive 20-year career within the ICT (Information and Communications Technology) sector, holding pivotal roles across various esteemed organizations.",
@@ -34,7 +34,7 @@
     },
     {
       "id": 5,
-      "image": "/img/team/john.jpg",
+      "image": "/img/team/john2.jpg",
       "name": "John Tanko",
       "position": "Senior Frontend Engineer",
       "profile": "John Tanko's career in the Information and Communications Technology domain, especially within the telecommunications sector, showcases a robust skill set in frontend and full-stack development. His expertise in various programming languages and frameworks, along with a solid educational background, underlines his capabilities in delivering comprehensive solutions and enhancing user experiences.",

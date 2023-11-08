@@ -29,7 +29,11 @@ const AboutUs = () => {
           <h1 className="section-title text-center mb-14 fade-in">Meet Our Team</h1>
           <div className="flex flex-row justify-center mt-5 items-center space-x-10">
             {ourTeam.teams.map((team, i) => (
-              <div style={{ "--delay": `${i * 0.1}s` }} className="bg-white border rounded-lg overflow-hidden cursor-pointer hover:shadow-md fade-in">
+              <div
+                key={i}
+                style={{ "--delay": `${i * 0.1}s` }}
+                className="bg-white border rounded-lg overflow-hidden cursor-pointer hover:shadow-md fade-in"
+              >
                 <div className="">
                   <div className="md:flex-shrink-0">
                     <img src={team.image} alt="Profile" className="w-full h-48 object-cover md:w-48" />

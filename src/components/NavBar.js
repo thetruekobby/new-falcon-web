@@ -13,7 +13,20 @@ const NavBar = () => {
 
   const navigate = useNavigate()
 
+  const checker = useRef(0)
+
   const nav = useRef()
+
+  const removeTransition = () => {
+    if (checker.current !== 0) return
+    const elements = document.querySelectorAll(".fade-in")
+    elements.forEach((element) => {
+      element.style.transitionProperty = "none"
+      element.style.transform = "translateX(0)"
+      element.style.opacity = "1"
+    })
+    checker.current = checker.current + 1
+  }
 
   // useEffect(() => {
   //   const setHeaderHeight = () => {
@@ -43,6 +56,7 @@ const NavBar = () => {
               offset={option.label === "home" ? -105 : -70}
               duration={500}
               onClick={() => {
+                removeTransition()
                 navigate("/")
               }}
               /* onSetActive={handleSetActive} */ className={

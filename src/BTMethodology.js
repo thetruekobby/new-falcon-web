@@ -1,7 +1,6 @@
 import { PiListChecksBold } from "react-icons/pi"
 import { useNavigate } from "react-router-dom"
 import db from "./db.json"
-console.log("🚀 ~ file: BTMethodology.js:4 ~ db:", db)
 
 const BTMethodology = () => {
   const navigate = useNavigate()

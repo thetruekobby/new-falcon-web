@@ -130,7 +130,7 @@ section > h1 {
 }
 
 /* fade into page animation by intersection observer */
-/* .fade-in {
+.fade-in {
   transform: translateY(30%);
   opacity: 0;
   transition: transform 0.5s var(--delay, 0s), opacity 0.5s var(--delay, 0s);
@@ -138,4 +138,4 @@ section > h1 {
 .fade-in.show {
   transform: translateY(0);
   opacity: 1;
-} */
+}
