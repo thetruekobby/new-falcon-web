@@ -26,7 +26,7 @@ const NavBar = () => {
   // }, [])
 
   return (
-    <nav ref={nav} className="bg-white sticky top-0 z-50 border-b border-gray-100">
+    <nav id="nav" ref={nav} className="bg-white sticky top-0 z-50 border-b border-gray-100">
       <div className="container flex justify-between py-3 mx-auto">
         <div className="flex flex-row items-center">
           <img src="/img/brand/logoOnly.png" alt="logo" className="object-contain h-20 w-20" />
@@ -40,7 +40,7 @@ const NavBar = () => {
               to={option.id}
               spy={true}
               smooth={true}
-              offset={-70}
+              offset={option.label === "home" ? -105 : -70}
               duration={500}
               onClick={() => {
                 navigate("/")
