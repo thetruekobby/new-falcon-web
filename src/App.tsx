@@ -4,8 +4,10 @@ import Home from "./pages/Home"
 import FullMethodology from "./pages/FullMethodology"
 import Team from "./pages/Team"
 import NotFound from "./pages/NotFound"
+import { useEffect } from "react"
 
 const App = () => {
+  
   return (
     <Routes>
       <Route element={<Layout />}>

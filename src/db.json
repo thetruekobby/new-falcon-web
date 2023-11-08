@@ -1,0 +1,82 @@
+{
+  "teams": [
+    {
+      "id": 1,
+      "image": "/img/team/mensah.jpg",
+      "name": "Benjamin Mensah",
+      "position": "Project Manager",
+      "profile": "Benjamin Mensah is a seasoned professional with an extensive 20-year career within the ICT (Information and Communications Technology) sector, holding pivotal roles across various esteemed organizations.",
+      "employment": "2 years"
+    },
+    {
+      "id": 2,
+      "image": "/img/team/james.jpeg",
+      "name": "James Amo",
+      "position": "Backend Team Lead",
+      "profile": "James Amo is a highly experienced Full Stack Developer with an extensive career spanning over a decade within the ICT (Information and Communications Technology) sector. He has held diverse roles primarily focusing on software development, systems integration, and business intelligence across various international locations.",
+      "employment": "2 years"
+    },
+    {
+      "id": 3,
+      "image": "/img/team/thomas.jpeg",
+      "name": "Thomas Davis",
+      "position": "Frontend Team Lead",
+      "profile": "Thomas Davis is a highly experienced Full Stack Developer with an expertise in Mobile & Web Portals applications development using React-Native for Android and iOS, and web development with ReactJS, NextJS, Bootstrap, and UI-UX design. His career spans across diverse roles focusing primarily on full-stack development.",
+      "employment": "2 years"
+    },
+    {
+      "id": 4,
+      "image": "/img/team/james.jpeg",
+      "name": "Aziz Adams",
+      "position": "Senior Backend Engineer",
+      "profile": "Abdul Aziz Adams possesses a wealth of experience in backend development within the telecommunications and banking sectors, showcasing expertise in a range of programming languages, development methodologies, and system management. His commitment to ongoing learning and certification further enriches his technical prowess in the field of Information and Communications Technology.",
+      "employment": "2 years"
+    },
+    {
+      "id": 5,
+      "image": "/img/team/john.jpg",
+      "name": "John Tanko",
+      "position": "Senior Frontend Engineer",
+      "profile": "John Tanko's career in the Information and Communications Technology domain, especially within the telecommunications sector, showcases a robust skill set in frontend and full-stack development. His expertise in various programming languages and frameworks, along with a solid educational background, underlines his capabilities in delivering comprehensive solutions and enhancing user experiences.",
+      "employment": "2 years"
+    }
+  ],
+  "methodology": [
+    {
+      "id": 1,
+      "name": "Requirements Gathering and Analysis",
+      "image": "/img/stock/pexels2.jpg",
+      "description": "In this initial stage, our development team work closely with our clients to understand and document the requirements of the software. This includes functional and non-functional requirements. The outcome of this stage is a detailed requirements specification that serves as the foundation for the project."
+    },
+    {
+      "id": 2,
+      "name": "Planning",
+      "image": "/img/stock/meeting.jpg",
+      "description": "Planning involves defining the project scope, objectives, budget, and timeline. Our project managers create a project plan, outlining tasks, resources, and a schedule for the entire software development process. Risks are assessed and mitigation strategies established"
+    },
+    {
+      "id": 3,
+      "name": "Design",
+      "image": "/img/stock/pexels-kampus.jpg",
+      "description": "During the design stage, the software architecture and high-level design are developed based on the requirements gathered earlier. Detailed designs for each component of the software are created, specifying how they will interact, data structures, algorithms, and user interfaces. Our design documentation is crucial for guiding the development phase."
+    },
+    {
+      "id": 4,
+      "name": "Implementation (Coding)",
+      "image": "/img/stock/pexels22.jpg",
+      "description": "In this phase, our developers write the actual code for the software based on the design specifications. They follow coding standards and best practices, and the code is thoroughly reviewed to ensure it meets quality and security standards."
+    },
+    {
+      "id": 5,
+      "name": "Testing",
+      "image": "/img/stock/pexels-gustavo.jpg",
+      "description": "The testing phase is where the software is rigorously tested to identify and fix defects and ensure it functions as expected. Various testing types are employed, including unit testing, integration testing, system testing, and user acceptance testing (UAT)"
+    },
+    {
+      "id": 6,
+      "name": "Deployment",
+      "image": "/img/stock/pexels-andrea-piacquadio-3801426.jpg",
+      "description": "Once the software passes all tests and is deemed ready for production, it is deployed to the target environment."
+    }
+  ]
+}

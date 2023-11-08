@@ -7,53 +7,53 @@ import { FaClock } from "react-icons/fa"
 import { contactSchema } from "./util/FormValidations"
 
 const ContactUs = () => {
-   const [payload, setPayload] = useState({
-     name: "",
-     email: "",
-     subject: "",
-     mobile: "",
-     description: "",
-   })
+  const [payload, setPayload] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    mobile: "",
+    description: "",
+  })
 
-   const [errors, setErrors] = useState({})
+  const [errors, setErrors] = useState({})
 
-   const validate = () => {
-     const validation = contactSchema.validate(payload, {
-       allowUnknown: true,
-       abortEarly: false,
-     })
+  const validate = () => {
+    const validation = contactSchema.validate(payload, {
+      allowUnknown: true,
+      abortEarly: false,
+    })
 
-     const errorList = {}
+    const errorList = {}
 
-     validation?.error?.details.forEach((err) => {
-       errorList[err.path[0]] = err.message.replaceAll('"', "")
-     })
+    validation?.error?.details.forEach((err) => {
+      errorList[err.path[0]] = err.message.replaceAll('"', "")
+    })
 
-     setErrors(errorList)
-   }
+    setErrors(errorList)
+  }
 
-   const handleSubmit = (e) => {
-     e.preventDefault()
-     validate()
-     //send details after the validation
-   }
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    validate()
+    //send details after the validation
+  }
 
-   const formOnChange = (key, value) => {
-     setPayload((prev) => {
-       return { ...prev, [key]: value }
-     })
-   }
+  const formOnChange = (key, value) => {
+    setPayload((prev) => {
+      return { ...prev, [key]: value }
+    })
+  }
 
   return (
     <section id="contact" className="pt-7 container mx-auto">
-      <h1 className="section-title">Contact Us</h1>
+      <h1 className="section-title mb-10 fade-in">Contact Us</h1>
 
-      <p className="text-center my-5 text-[var(--clr-text-secondary)] text-lg">
+      {/* <p className="text-center my-5 text-[var(--clr-text-secondary)] text-lg">
         Meet us at a Cyberteq office near you or reach us electronically. Our experts will help you to choose the proper solution for your
         organization and answer all questions related to Cybersecurity, Digital Transformation & Telecommunication.
-      </p>
+      </p> */}
       <div className="flex flex-col md:flex-row gap-4 pb-7">
-        <div className="contact-card">
+        <div className="contact-card fade-in">
           <div className="contact-card-header">
             <BsFillPinMapFill className="text-2xl text-black" />
             <h2 className=""> Office Location</h2>
@@ -62,7 +62,7 @@ const ContactUs = () => {
           <p className="text-[var(--clr-text-secondary)] invisible">You can reach us at the following address:</p>
           <p className="">BTFalcon Technologies Ltd, BJ Global Home, E.D Sowah Avenue, East Legon, Accra, Ghana</p>
         </div>
-        <div className="contact-card">
+        <div className="contact-card fade-in">
           <div className="contact-card-header">
             <HiOutlineMailOpen className="text-2xl text-black" />
             <h2> Email Address</h2>
@@ -70,7 +70,7 @@ const ContactUs = () => {
           <p className="text-[var(--clr-text-secondary)]">Send us your questions by email and we will reply as soon as possible:</p>
           <p>info@falcontechnologies.com.gh</p>
         </div>
-        <div className="contact-card">
+        <div className="contact-card fade-in">
           <div className="contact-card-header">
             <BsFillAlarmFill className=" text-2xl text-black " />
             <h2> Working Hours</h2>
@@ -177,7 +177,7 @@ const ContactUs = () => {
           </form>
           <div className="md:flex-1 bg-slate-200 overflow-hidden h-96">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15881.625400775325!2d-0.1498856!3d5.6542124!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9d79a7634f5f%3A0x96f2b3498ca794d2!2sCYBERTEQ%20Falcon%20Limited!5e0!3m2!1sen!2sgh!4v1680009150550!5m2!1sen!2sgh"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.406102980161!2d-0.1524586262364234!3d5.654248432656459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9d3bc50abbc5%3A0xf7b140eb5d67982a!2sBTFalcon%20Technologies%20LTD!5e0!3m2!1sen!2sgh!4v1699473152219!5m2!1sen!2sgh"
               // width="600"
               // height="450"
               allowFullScreen=""

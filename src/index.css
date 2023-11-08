@@ -48,41 +48,40 @@ body {
 
 @keyframes slide-in {
   0% {
-    transform: translateY(-10%);
+    transform: translateX(-10%);
     opacity: 0;
   }
   100% {
-    transform: translateY(0);
+    transform: translateX(0);
     opacity: 1;
   }
 }
 
 .animate-slide-in {
-  animation: slide-in 6s ease-out;
+  animation: slide-in 0.7s ease-out;
 }
 
 @keyframes slide-in2 {
   0% {
-    transform: translateY(10%);
+    transform: translateX(10%);
     opacity: 0;
   }
   100% {
-    transform: translateY(0);
+    transform: translateX(0);
     opacity: 1;
   }
 }
 
 .animate-slide-in2 {
-  animation: slide-in2 6s ease-out;
+  animation: slide-in2 0.7s ease-out var(--delay, 0s);
 }
 
 .methodology-card {
-  @apply relative bg-white rounded hover:shadow-md border col-span-11 sm:col-span-4 lg:col-span-4 flex flex-col gap-3 items-center py-16;
+  @apply relative bg-white rounded hover:shadow-md border col-span-11 sm:col-span-4 lg:col-span-4 flex flex-col gap-5 pb-5 items-center;
 }
-.methodology-card::before {
+/* .methodology-card::before {
   @apply w-full block h-3 top-0 left-0 bg-black;
-}
-
+} */
 
 /* merge style with content title */
 section > h1 {
@@ -123,9 +122,20 @@ section > h1 {
   @apply text-red-700 text-xs;
 }
 
-.section-title{
-  @apply capitalize font-bold text-2xl
+.section-title {
+  @apply capitalize font-bold text-2xl;
 }
-.section-subtitle{
-  @apply font-bold text-xl capitalize
+.section-subtitle {
+  @apply font-bold text-xl capitalize;
 }
+
+/* fade into page animation by intersection observer */
+/* .fade-in {
+  transform: translateY(30%);
+  opacity: 0;
+  transition: transform 0.5s var(--delay, 0s), opacity 0.5s var(--delay, 0s);
+}
+.fade-in.show {
+  transform: translateY(0);
+  opacity: 1;
+} */
