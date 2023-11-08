@@ -1,5 +1,6 @@
 import { Link } from "react-scroll"
-import { useEffect,useRef } from 'react'
+import { useEffect, useRef } from "react"
+import { useNavigate } from "react-router-dom"
 
 const NavBar = () => {
   const navOptions = [
@@ -9,6 +10,8 @@ const NavBar = () => {
     { label: "portfolio", id: "portfolio" },
     { label: "contact us", id: "contact" },
   ]
+
+  const navigate = useNavigate()
 
   const nav = useRef()
 
@@ -39,6 +42,9 @@ const NavBar = () => {
               smooth={true}
               offset={-70}
               duration={500}
+              onClick={() => {
+                navigate("/")
+              }}
               /* onSetActive={handleSetActive} */ className={
                 option.id === "contact" ? "btn-primary" : "p-2 font-semibold whitespace-nowrap cursor-pointer"
               }

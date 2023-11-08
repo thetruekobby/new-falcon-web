@@ -8,7 +8,7 @@ const BTPortfolio = () => {
   ]
   return (
     <section id="portfolio" className="  pt-16 pb-10 bg-gray-50">
-      <h1 className="section-title mb-7">Portfolio</h1>
+      <h1 className="section-title mb-7">Our Portfolio</h1>
       <div className="container mx-auto grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))]  gap-5 justify-items-center">
         {portfolio.map((portfolio, index) => (
           <div key={index} className="pt-7 px-5 border flex justify-center  hover:shadow-md rounded-lg bg-white relative aspect-square">

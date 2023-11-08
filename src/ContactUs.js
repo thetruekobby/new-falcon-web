@@ -1,6 +1,8 @@
 import React, { useState } from "react"
 import { IoLocationSharp } from "react-icons/io5"
 import { HiOutlineMailOpen } from "react-icons/hi"
+import { BsFillPinMapFill } from "react-icons/bs"
+import { BsFillAlarmFill } from "react-icons/bs"
 import { FaClock } from "react-icons/fa"
 import { contactSchema } from "./util/FormValidations"
 
@@ -44,45 +46,46 @@ const ContactUs = () => {
 
   return (
     <section id="contact" className="pt-7 container mx-auto">
-      <h1>Contact Us</h1>
+      <h1 className="section-title">Contact Us</h1>
 
       <p className="text-center my-5 text-[var(--clr-text-secondary)] text-lg">
         Meet us at a Cyberteq office near you or reach us electronically. Our experts will help you to choose the proper solution for your
         organization and answer all questions related to Cybersecurity, Digital Transformation & Telecommunication.
       </p>
-      <div className="flex flex-col md:flex-row gap-4">
+      <div className="flex flex-col md:flex-row gap-4 pb-7">
         <div className="contact-card">
           <div className="contact-card-header">
-            <IoLocationSharp className="text-2xl text-black" />
+            <BsFillPinMapFill className="text-2xl text-black" />
             <h2 className=""> Office Location</h2>
           </div>
-          <p className="text-[var(--clr-text-secondary)] my-3">You can reach us at the following address:</p>
-          <p className="">Cyberteq Falcon Ltd, BJ Global Home, E.D Sowah Avenue, East Legon, Accra, Ghana</p>
+          <p className="text-[var(--clr-text-secondary)]">You can reach us at the following address:</p>
+          <p className="text-[var(--clr-text-secondary)] invisible">You can reach us at the following address:</p>
+          <p className="">BTFalcon Technologies Ltd, BJ Global Home, E.D Sowah Avenue, East Legon, Accra, Ghana</p>
         </div>
         <div className="contact-card">
           <div className="contact-card-header">
             <HiOutlineMailOpen className="text-2xl text-black" />
             <h2> Email Address</h2>
           </div>
-          <p>Send us your questions by email and we will reply as soon as possible:</p>
-          <p>btfalcontechnologies@gmail.com</p>
+          <p className="text-[var(--clr-text-secondary)]">Send us your questions by email and we will reply as soon as possible:</p>
+          <p>info@falcontechnologies.com.gh</p>
         </div>
         <div className="contact-card">
           <div className="contact-card-header">
-            <FaClock className=" text-2xl text-black " />
+            <BsFillAlarmFill className=" text-2xl text-black " />
             <h2> Working Hours</h2>
           </div>
-          <p>We are doing our best to secure our customers. Working hours:</p>
+          <p className="text-[var(--clr-text-secondary)]">We are doing our best to secure our customers. Working hours:</p>
           <p>Mon – Fri: 8 AM – 5 PM Sat – Sun: Closed.</p>
         </div>
       </div>
-      <div className="py-5 px-10">
-        <h3 className="text-2xl font-bold ">Get In Touch</h3>
-        <p className=" text-lg text-[var(--clr-text-secondary)] font-medium m-5 text-center">
+      <div className="pt-5 pb-10 px-10 bg-gray-100">
+        <h3 className="text-2xl font-bold mb-5 mt-7">Get In Touch</h3>
+        {/* <p className=" text-lg text-[var(--clr-text-secondary)] font-medium m-5 text-center">
           Thank you for your interest in Falcon Technologies. Please provide the following information about your business needs. This information
           will enable us to route your request to the appropriate person. You should receive a response within two days.
-        </p>
-        <div className="flex flex-col md:flex-row gap-8">
+        </p> */}
+        <div className="flex flex-col md:flex-row gap-8 ">
           <form action="" onSubmit={handleSubmit} noValidate className="flex-1 grid grid-cols-2 gap-4">
             <div>
               <label htmlFor="name" className="form-label">
@@ -161,7 +164,7 @@ const ContactUs = () => {
               <textarea
                 name="description"
                 id="desc"
-                className="w-full border border-black outline-none p-3"
+                className="w-full border outline-none p-3 rounded mt-3"
                 placeholder="Type your message here"
                 value={payload.description}
                 onChange={(e) => {
@@ -170,12 +173,7 @@ const ContactUs = () => {
               />
               <div className="error">{errors?.description}</div>
             </div>
-            <input
-              type="submit"
-              value="Send Message"
-              className=" cursor-pointer col-span-2 btn-primary"
-              onClick={validate}
-            />
+            <input type="submit" value="Send Message" className=" cursor-pointer col-span-2 btn-primary" onClick={validate} />
           </form>
           <div className="md:flex-1 bg-slate-200 overflow-hidden h-96">
             <iframe
