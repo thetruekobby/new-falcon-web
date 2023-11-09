@@ -2,9 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  @apply text-lg;
+}
 :root {
   --clr-text-secondary: theme(colors.gray.600);
   --clr-bg-gray: theme(colors.gray.100);
+  scroll-padding: 200px;
 }
 body {
   margin: 0;
@@ -84,9 +88,6 @@ body {
 } */
 
 /* merge style with content title */
-section > h1 {
-  @apply font-bold text-2xl text-center;
-}
 
 .contact-card {
   @apply flex-1 p-3;
@@ -123,7 +124,7 @@ section > h1 {
 }
 
 .section-title {
-  @apply capitalize font-bold text-2xl;
+  @apply capitalize font-bold text-2xl text-center;
 }
 .section-subtitle {
   @apply font-bold text-xl capitalize;

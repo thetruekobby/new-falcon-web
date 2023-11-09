@@ -1,3 +1,4 @@
+import { Link } from "react-scroll"
 const Header = () => {
   return (
     <div id="hero" className="bg-gray-100">
@@ -7,7 +8,9 @@ const Header = () => {
           <h2 className="font-semibold text-[var(--clr-text-secondary)] text-2xl mb-4">
             Unleashing the power of code to transform your vision to reality.
           </h2>
-          <button className="btn-primary mt-14">get in touch</button>
+          <Link to="contact" smooth={true} offset={-90} className="btn-primary mt-14">
+            get in touch
+          </Link>
         </div>
         <div className="img-outline-right flex-1 order-first md:order-last animate-slide-in2 z-10">
           <img src="/img/stock/allgo-an-app-for-plus-size-people-eqlRthvN188-unsplash.jpg" alt="" className="w-full object-cover" />
@@ -15,6 +18,6 @@ const Header = () => {
       </div>
     </div>
   )
-};
+}
 
-export default Header;
+export default Header

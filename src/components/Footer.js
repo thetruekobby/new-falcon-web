@@ -15,9 +15,7 @@ const Footer = () => {
             <li className="font-bold">Services</li>
             <Link
               className="block cursor-pointer"
-              activeClass="active"
               to={"fintech"}
-              spy={true}
               smooth={true}
               offset={-100}
               duration={500}
@@ -29,9 +27,7 @@ const Footer = () => {
             </Link>
             <Link
               className="block cursor-pointer"
-              activeClass="active"
               to={"mobile"}
-              spy={true}
               smooth={true}
               offset={-100}
               duration={500}
@@ -43,9 +39,7 @@ const Footer = () => {
             </Link>
             <Link
               className="block cursor-pointer"
-              activeClass="active"
               to={"ussd"}
-              spy={true}
               smooth={true}
               offset={-100}
               duration={500}
@@ -62,9 +56,7 @@ const Footer = () => {
             <li className="font-bold">Quick Links</li>
             <Link
               className="block cursor-pointer"
-              activeClass="active"
               to={"about"}
-              spy={true}
               smooth={true}
               offset={-100}
               duration={500}
@@ -76,9 +68,7 @@ const Footer = () => {
             </Link>
             <Link
               className="block cursor-pointer"
-              activeClass="active"
               to={"portfolio"}
-              spy={true}
               smooth={true}
               offset={-100}
               duration={500}
@@ -90,9 +80,7 @@ const Footer = () => {
             </Link>
             <Link
               className="block cursor-pointer"
-              activeClass="active"
               to={"contact"}
-              spy={true}
               smooth={true}
               offset={-100}
               duration={500}

@@ -10,12 +10,19 @@ const BTMethodology = () => {
 
       <div className="grid grid-cols-12 gap-x-9 gap-y-9">
         {db?.methodology?.map((methodology, index) => (
-          <div style={{ "--delay": `${index * 0.1}s` }} key={index} className="methodology-card px-3 pt-3 fade-in">
+          <div
+            style={{ "--delay": `${index * 0.1}s` }}
+            key={index}
+            className="methodology-card px-3 pt-3 fade-in cursor-pointer"
+            onClick={() => {
+              navigate("/methodology", { state: { section: methodology.id } })
+            }}
+          >
             {/* <PiListChecksBold size={30} /> */}
             <div className="h-48 w-full">
               <img src={methodology.image} alt="methodology" className="w-full h-full object-cover object-[0%_15%]" />
             </div>
-            <h1 className="font-bold">{methodology.name}</h1>
+            <p className="font-bold text-center">{methodology.name}</p>
           </div>
         ))}
       </div>

@@ -62,6 +62,7 @@
     {
       "id": 3,
       "name": "Design",
+      "test": "design",
       "image": "/img/stock/pexels-kampus.jpg",
       "description": "During the design stage, the software architecture and high-level design are developed based on the requirements gathered earlier. Detailed designs for each component of the software are created, specifying how they will interact, data structures, algorithms, and user interfaces. Our design documentation is crucial for guiding the development phase."
     },

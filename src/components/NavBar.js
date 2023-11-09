@@ -1,8 +1,9 @@
 import { Link } from "react-scroll"
 import { useEffect, useRef } from "react"
-import { useNavigate } from "react-router-dom"
+import { useLocation, useNavigate } from "react-router-dom"
 
 const NavBar = () => {
+  const location = useLocation()
   const navOptions = [
     { label: "home", id: "hero" },
     { label: "about us", id: "about" },
@@ -21,9 +22,10 @@ const NavBar = () => {
     if (checker.current !== 0) return
     const elements = document.querySelectorAll(".fade-in")
     elements.forEach((element) => {
-      element.style.transitionProperty = "none"
-      element.style.transform = "translateX(0)"
-      element.style.opacity = "1"
+      element.classList.remove("fade-in")
+      // element.style.transitionProperty = "none"
+      // element.style.transform = "translateX(0)"
+      // element.style.opacity = "1"
     })
     checker.current = checker.current + 1
   }
@@ -41,7 +43,12 @@ const NavBar = () => {
   return (
     <nav id="nav" ref={nav} className="bg-white sticky top-0 z-50 border-b border-gray-100">
       <div className="container flex justify-between py-3 mx-auto">
-        <div className="flex flex-row items-center">
+        <div
+          className="flex flex-row items-center cursor-pointer"
+          onClick={() => {
+            window.location.assign("/")
+          }}
+        >
           <img src="/img/brand/logoOnly.png" alt="logo" className="object-contain h-20 w-20" />
           <span className="text-2xl font-bold">Falcon Technologies</span>
         </div>
@@ -49,9 +56,9 @@ const NavBar = () => {
           {navOptions.map((option, index) => (
             <Link
               key={index}
-              activeClass="active"
               to={option.id}
-              spy={true}
+              // spy={true}
+              //smooth has been commented out because it is being handled by the css
               smooth={true}
               offset={option.label === "home" ? -105 : -70}
               duration={500}
