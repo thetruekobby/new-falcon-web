@@ -2,6 +2,8 @@ import { Link } from "react-scroll"
 import { useEffect, useRef } from "react"
 import { useLocation, useNavigate } from "react-router-dom"
 
+import { HiOutlineMenu } from "react-icons/hi"
+
 const NavBar = () => {
   const location = useLocation()
   const navOptions = [
@@ -27,7 +29,7 @@ const NavBar = () => {
       // element.style.transform = "translateX(0)"
       // element.style.opacity = "1"
     })
-    checker.current = checker.current + 1
+    checker.current = 1
   }
 
   // useEffect(() => {
@@ -41,18 +43,18 @@ const NavBar = () => {
   // }, [])
 
   return (
-    <nav id="nav" ref={nav} className="bg-white sticky top-0 z-50 border-b border-gray-100">
-      <div className="container flex justify-between py-3 mx-auto">
+    <nav id="nav" ref={nav} className="bg-white sticky top-0 z-50 border-b border-gray-100 px-[var(--page-margin,3rem)]">
+      <div className="container flex justify-between items-center py-3 mx-auto">
         <div
           className="flex flex-row items-center cursor-pointer"
           onClick={() => {
             window.location.assign("/")
           }}
         >
-          <img src="/img/brand/logoOnly.png" alt="logo" className="object-contain h-20 w-20" />
-          <span className="text-2xl font-bold">Falcon Technologies</span>
+          <img src="/img/brand/logoOnly.png" alt="logo" className="object-contain h-10 md:h-20 aspect-1" />
+          <span className="hidden lg:block text-2xl font-bold">Falcon Technologies</span>
         </div>
-        <ul className="flex items-center gap-5 capitalize text-xl">
+        <ul className="items-center gap-5 capitalize text-xl whitespace hidden md:flex ">
           {navOptions.map((option, index) => (
             <Link
               key={index}
@@ -74,6 +76,7 @@ const NavBar = () => {
             </Link>
           ))}
         </ul>
+        <HiOutlineMenu size={30} className="md:hidden" />
       </div>
     </nav>
   )

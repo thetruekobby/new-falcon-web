@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom"
 const AboutUs = () => {
   const navigate = useNavigate()
   return (
-    <section id="about" className="bg-gray-50">
+    <section id="about" className="bg-gray-50 px-[var(--page-margin)]">
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row gap-5 pr-4 py-14 pt-20">
           <div className="flex-[1] lg:flex-1 order-last md:order-first ">
@@ -27,7 +27,7 @@ const AboutUs = () => {
             <img src="/img/stock/pexels-christina-morillo.jpg" alt="" className="w-full object-contain max-h-[350px]" />
           </div>
         </div>
-        <div className="p-12">
+        <div className="py-12">
           <h1 className="section-title text-center mb-14 fade-in">Meet Our Team</h1>
           <div className="flex flex-row justify-center mt-5 items-stretch space-x-5">
             {ourTeam.teams.map((team, i) => (

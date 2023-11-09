@@ -4,10 +4,14 @@
 
 * {
   @apply text-lg;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 :root {
   --clr-text-secondary: theme(colors.gray.600);
   --clr-bg-gray: theme(colors.gray.100);
+  --page-margin: theme("spacing.20");
   scroll-padding: 200px;
 }
 body {
@@ -108,7 +112,7 @@ body {
 }
 
 .form-label {
-  @apply block mt-3 capitalize;
+  @apply block mt-3 capitalize text-base;
 }
 
 /* .form-label::after {
@@ -116,7 +120,7 @@ body {
   @apply text-red-700;
 } */
 .form-input {
-  @apply outline-none border h-10 mt-3  px-3 w-full rounded;
+  @apply outline-none border h-10 mt-3  px-3 w-full rounded text-base;
 }
 
 .error {

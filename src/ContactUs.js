@@ -45,7 +45,7 @@ const ContactUs = () => {
   }
 
   return (
-    <section id="contact" className="pt-7 container mx-auto">
+    <section id="contact" className="pt-7 px-[var(--page-margin,5rem)]">
       <h1 className="section-title mb-10 fade-in">Contact Us</h1>
 
       {/* <p className="text-center my-5 text-[var(--clr-text-secondary)] text-lg">

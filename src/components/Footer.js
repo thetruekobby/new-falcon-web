@@ -4,13 +4,13 @@ import { Link } from "react-scroll"
 const Footer = () => {
   const navigate = useNavigate()
   return (
-    <footer className="bg-white">
-      <div className="container mx-auto flex flex-wrap justify-between w-full py-20 pb-5">
-        <div className="w-full sm:w-1/2 md:w-1/3 mb-4 flex flex-col justify-center item-center">
+    <footer className="bg-white px-[var(--page-margin,5rem)] ">
+      <div className="container mx-auto flex flex-col sm:flex-row flex-wrap gap-10 justify-between w-full py-20 pb-5">
+        <div className="flex-1 sm:basis-[40%] md:basis-[0%] flex flex-col justify-center item-center">
           <img src="/img/brand/logoOnly.png" alt="logo" className="object-contain h-20 w-20" />
           <p className="font-bold">Falcon Technologies</p>
         </div>
-        <div className="w-full sm:w-1/2 md:w-1/3 mb-4">
+        <div className="flex-1 sm:basis-[40%] md:basis-[0%]">
           <ul className="space-y-3">
             <li className="font-bold">Services</li>
             <Link
@@ -51,7 +51,7 @@ const Footer = () => {
             </Link>
           </ul>
         </div>
-        <div className="w-full sm:w-1/2 md:w-1/3 mb-4">
+        <div className="flex-1 sm:basis-[40%] md:basis-[0%]">
           <ul className="space-y-3">
             <li className="font-bold">Quick Links</li>
             <Link

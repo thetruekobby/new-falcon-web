@@ -5,10 +5,8 @@ import Footer from "./Footer"
 import { useEffect } from "react"
 
 const Layout = () => {
-  
-
   return (
-    <div className="container-full bg-white">
+    <div className="bg-white">
       <NavBar />
       <Outlet />
       <Footer />

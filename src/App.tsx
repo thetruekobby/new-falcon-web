@@ -6,9 +6,9 @@ import Team from "./pages/Team"
 import NotFound from "./pages/NotFound"
 
 const App = () => {
-  const location = useLocation()
-  const methodologypage = location.pathname === "/methodology"
-  document.documentElement.style.scrollBehavior = methodologypage ? "smooth" : "auto"
+  // const location = useLocation()
+  // const methodologypage = location.pathname === "/methodology"
+  // document.documentElement.style.scrollBehavior = methodologypage ? "smooth" : "auto"
 
   return (
     <Routes>
