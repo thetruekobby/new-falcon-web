@@ -36,7 +36,7 @@ const AboutUs = () => {
               >
                 <div className="">
                   <div className="md:flex-shrink-0">
-                    <img src={team.image} alt="Profile" className="w-full h-48 object-cover md:w-48" />
+                    <img src={team.image} alt="Profile" className={`w-full h-48 object-cover md:w-48 ${team.id === 4 && "object-[0%_0%]"}`} />
                   </div>
                   <div className="p-3 text-center">
                     <h2 className="block mt-1 text-lg leading-tight font-medium text-black">{team.name}</h2>
