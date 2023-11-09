@@ -25,6 +25,12 @@ const Home = () => {
     observeElements.forEach((element) => {
       observer.observe(element)
     })
+
+    return () => {
+      observeElements.forEach((element) => {
+        observer.unobserve(element)
+      })
+    }
   }, [])
 
   return (
