@@ -27,21 +27,24 @@ const AboutUs = () => {
         </div>
         <div className="p-12">
           <h1 className="section-title text-center mb-14 fade-in">Meet Our Team</h1>
-          <div className="flex flex-row justify-center mt-5 items-center space-x-10">
+          <div className="flex flex-row justify-center mt-5 items-center space-x-5">
             {ourTeam.teams.map((team, i) => (
               <div
                 key={i}
                 style={{ "--delay": `${i * 0.1}s` }}
-                className="bg-white border rounded-lg overflow-hidden cursor-pointer hover:shadow-md fade-in"
+                className="bg-white border rounded-lg overflow-hidden cursor-pointer hover:shadow-md fade-in flex-shrink-0 flex-1"
               >
                 <div className="">
-                  <div className="md:flex-shrink-0">
-                    <img src={team.image} alt="Profile" className={`w-full h-48 object-cover md:w-48 ${team.id === 4 && "object-[0%_0%]"}`} />
-                  </div>
-                  <div className="p-3 text-center">
-                    <h2 className="block mt-1 text-lg leading-tight font-medium text-black">{team.name}</h2>
-                    <div className="tracking-wide text-sm text-gray-400 font-semibold">{team.position}</div>
-                  </div>
+                  <img
+                    src={team.image}
+                    style={{ objectPosition: team["object-position"] }}
+                    alt="Profile"
+                    className={`w-full h-48 object-cover object-center `}
+                  />
+                </div>
+                <div className="p-3 text-center">
+                  <h2 className="block mt-1 text-lg leading-tight font-medium text-black">{team.name}</h2>
+                  <div className="tracking-wide text-sm text-gray-400 font-semibold">{team.position}</div>
                 </div>
               </div>
             ))}
