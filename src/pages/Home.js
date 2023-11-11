@@ -1,12 +1,14 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState, useRef } from "react"
 import AboutUs from "../AboutUs"
 import BTMethodology from "../BTMethodology"
 import BTPortfolio from "../BTPortfolio"
 import BTServices from "../BTServices"
 import ContactUs from "../ContactUs"
 import Header from "../components/Header"
+import { useLocation } from "react-router-dom"
 
-const Home = () => {
+const Home = ({ testRef }) => {
+  const location = useLocation()
   useEffect(() => {
     const observeElements = document.querySelectorAll(".fade-in")
     const observer = new IntersectionObserver(
@@ -32,6 +34,10 @@ const Home = () => {
       })
     }
   }, [])
+  useEffect(() => {
+    if (!location?.state?.hash) return
+    window.location.hash = location?.state?.hash
+  }, [])
 
   return (
     <div>
@@ -40,7 +46,7 @@ const Home = () => {
       <BTServices />
       <BTMethodology />
       <BTPortfolio />
-      <ContactUs />
+      <ContactUs testRef={testRef} />
     </div>
   )
 }

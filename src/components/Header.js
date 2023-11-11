@@ -8,12 +8,12 @@ const Header = () => {
           <h2 className="font-semibold text-[var(--clr-text-secondary)] text-2xl mb-10">
             Unleashing the power of code to transform your vision to reality.
           </h2>
-          <Link to="contact" smooth={true} offset={-90} className="btn-primary">
+          <Link to="get-in-touch" smooth={true} offset={-200} className="btn-primary">
             get in touch
           </Link>
         </div>
         <div className="img-outline-right flex-1 order-first md:order-last animate-slide-in2 z-10">
-          <img src="/img/stock/allgo-an-app-for-plus-size-people-eqlRthvN188-unsplash.jpg" alt="" className="w-full object-cover" />
+          <img src="/img/stock/twopeople.jpg" alt="" className="w-full object-cover" />
         </div>
       </div>
     </div>

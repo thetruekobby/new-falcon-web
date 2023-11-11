@@ -12,7 +12,8 @@
   --clr-text-secondary: theme(colors.gray.600);
   --clr-bg-gray: theme(colors.gray.100);
   --page-margin: theme("spacing.20");
-  scroll-padding: 200px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 200px;
 }
 body {
   margin: 0;
@@ -143,4 +144,8 @@ body {
 .fade-in.show {
   transform: translateY(0);
   opacity: 1;
+}
+
+.mobile-nav.show {
+  transform: translate(0);
 }

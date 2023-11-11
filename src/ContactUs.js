@@ -6,7 +6,7 @@ import { BsFillAlarmFill } from "react-icons/bs"
 import { FaClock } from "react-icons/fa"
 import { contactSchema } from "./util/FormValidations"
 
-const ContactUs = () => {
+const ContactUs = ({ testRef }) => {
   const [payload, setPayload] = useState({
     name: "",
     email: "",
@@ -45,7 +45,7 @@ const ContactUs = () => {
   }
 
   return (
-    <section id="contact" className="pt-7 px-[var(--page-margin,5rem)]">
+    <section ref={testRef} id="contact" className="pt-7 px-[var(--page-margin,5rem)]">
       <h1 className="section-title mb-10 fade-in">Contact Us</h1>
 
       {/* <p className="text-center my-5 text-[var(--clr-text-secondary)] text-lg">
@@ -59,7 +59,7 @@ const ContactUs = () => {
             <h2 className=""> Office Location</h2>
           </div>
           <p className="text-[var(--clr-text-secondary)]">You can reach us at the following address:</p>
-          <p className="text-[var(--clr-text-secondary)] invisible">You can reach us at the following address:</p>
+          {/* <p className="text-[var(--clr-text-secondary)] invisible">You can reach us at the following address:</p> */}
           <p className="">BTFalcon Technologies Ltd, BJ Global Home, E.D Sowah Avenue, East Legon, Accra, Ghana</p>
         </div>
         <div className="contact-card fade-in">
@@ -75,7 +75,8 @@ const ContactUs = () => {
             <BsFillAlarmFill className=" text-2xl text-black " />
             <h2> Working Hours</h2>
           </div>
-          <p className="text-[var(--clr-text-secondary)]">We are doing our best to secure our customers. Working hours:</p>
+          <p className="text-[var(--clr-text-secondary)]">Working hours:</p>
+          <p className="invisible text-[var(--clr-text-secondary)]">Working hours:</p>
           <p>Mon – Fri: 8 AM – 5 PM Sat – Sun: Closed.</p>
         </div>
       </div>
@@ -85,7 +86,7 @@ const ContactUs = () => {
           Thank you for your interest in Falcon Technologies. Please provide the following information about your business needs. This information
           will enable us to route your request to the appropriate person. You should receive a response within two days.
         </p> */}
-        <div className="flex flex-col md:flex-row gap-8 ">
+        <div id="get-in-touch" className="flex flex-col md:flex-row gap-8 ">
           <form action="" onSubmit={handleSubmit} noValidate className="flex-1 grid grid-cols-2 gap-4">
             <div>
               <label htmlFor="name" className="form-label">

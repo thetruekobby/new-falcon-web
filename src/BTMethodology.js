@@ -13,14 +13,14 @@ const BTMethodology = () => {
           <div
             style={{ "--delay": `${index * 0.1}s` }}
             key={index}
-            className="methodology-card px-3 pt-3 fade-in cursor-pointer"
+            className="methodology-card px-3 pt-3 cursor-pointer fade-in"
             onClick={() => {
               navigate("/methodology", { state: { section: methodology.id } })
             }}
           >
             {/* <PiListChecksBold size={30} /> */}
             <div className="h-48 w-full">
-              <img src={methodology.image} alt="methodology" className="w-full h-full object-cover object-[0%_15%]" />
+              <img src={methodology.image} alt="methodology" className="w-full h-full min-w-full min-h-full object-cover object-[0%_15%]" />
             </div>
             <p className="font-bold text-center">{methodology.name}</p>
           </div>

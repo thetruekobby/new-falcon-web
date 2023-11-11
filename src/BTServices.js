@@ -3,8 +3,8 @@ import React from "react"
 const BTServices = () => {
   return (
     <section id="services" className="px-[var(--page-margin,5rem)]  py-8">
-      <h1 className="section-title mb-14 fade-in">Our Services</h1>
-      <div className="flex flex-col md:flex-row gap-5 items-start pr-14">
+      <h1 className="section-title mb-20 fade-in">Our Services</h1>
+      <div className="flex flex-col md:flex-row gap-5 items-start pr-14 pb-20">
         <div className="flex-[2] lg:flex-[2] order-last ">
           <div className="">
             <h2 id="fintech" className="section-subtitle fade-in mb-4">

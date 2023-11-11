@@ -2,8 +2,8 @@
   "teams": [
     {
       "id": 1,
-      "image": "/img/team/bm.JPG",
-      "object-position":"0% 30%",
+      "image": "/img/team/bm-removebg-preview.png",
+      "object-position": "0% 30%",
       "name": "Benjamin Mensah",
       "position": "Project Manager",
       "profile": "Benjamin Mensah is a seasoned professional with an extensive 20-year career within the ICT (Information and Communications Technology) sector, holding pivotal roles across various esteemed organizations.",
@@ -11,8 +11,8 @@
     },
     {
       "id": 2,
-      "image": "/img/team/james.jpeg",
-      "object-position":"0% 0%",
+      "image": "/img/team/james-removebg-preview.png",
+      "object-position": "0% 0%",
       "name": "James Amo",
       "position": "Backend Team Lead",
       "profile": "James Amo is a highly experienced Full Stack Developer with an extensive career spanning over a decade within the ICT (Information and Communications Technology) sector. He has held diverse roles primarily focusing on software development, systems integration, and business intelligence across various international locations.",
@@ -20,8 +20,8 @@
     },
     {
       "id": 3,
-      "image": "/img/team/thomas.jpeg",
-      "object-position":"0% -10%",
+      "image": "/img/team/thomas-removebg-preview.png",
+      "object-position": "0% -10%",
       "name": "Thomas Davis",
       "position": "Frontend Team Lead",
       "profile": "Thomas Davis is a highly experienced Full Stack Developer with an expertise in Mobile & Web Portals applications development using React-Native for Android and iOS, and web development with ReactJS, NextJS, Bootstrap, and UI-UX design. His career spans across diverse roles focusing primarily on full-stack development.",
@@ -29,8 +29,8 @@
     },
     {
       "id": 4,
-      "image": "/img/team/aziz4.jpg",
-      "object-position":"0% 50%",
+      "image": "/img/team/aziz4-removebg-preview.png",
+      "object-position": "0% 50%",
       "name": "Aziz Adams",
       "position": "Senior Backend Engineer",
       "profile": "Abdul Aziz Adams possesses a wealth of experience in backend development within the telecommunications and banking sectors, showcasing expertise in a range of programming languages, development methodologies, and system management. His commitment to ongoing learning and certification further enriches his technical prowess in the field of Information and Communications Technology.",
@@ -38,8 +38,16 @@
     },
     {
       "id": 5,
-      "image": "/img/team/john2.JPG",
-      "object-position":"0% 0%",
+      "image": "/img/team/john2-removebg-preview.png",
+      "object-position": "0% 0%",
+      "name": "John Tanko",
+      "position": "Senior Frontend Engineer",
+      "profile": "John Tanko's career in the Information and Communications Technology domain, especially within the telecommunications sector, showcases a robust skill set in frontend and full-stack development. His expertise in various programming languages and frameworks, along with a solid educational background, underlines his capabilities in delivering comprehensive solutions and enhancing user experiences.",
+      "employment": "2 years"
+    },
+    {
+      "id": 5,
+      "object-position": "0% 0%",
       "name": "John Tanko",
       "position": "Senior Frontend Engineer",
       "profile": "John Tanko's career in the Information and Communications Technology domain, especially within the telecommunications sector, showcases a robust skill set in frontend and full-stack development. His expertise in various programming languages and frameworks, along with a solid educational background, underlines his capabilities in delivering comprehensive solutions and enhancing user experiences.",
@@ -49,7 +57,7 @@
   "methodology": [
     {
       "id": 1,
-      "name": "Requirements Gathering and Analysis",
+      "name": "Requirements Gathering",
       "image": "/img/stock/pexels2.jpg",
       "description": "In this initial stage, our development team work closely with our clients to understand and document the requirements of the software. This includes functional and non-functional requirements. The outcome of this stage is a detailed requirements specification that serves as the foundation for the project."
     },
@@ -68,7 +76,7 @@
     },
     {
       "id": 4,
-      "name": "Implementation (Coding)",
+      "name": "Implementation",
       "image": "/img/stock/pexels22.jpg",
       "description": "In this phase, our developers write the actual code for the software based on the design specifications. They follow coding standards and best practices, and the code is thoroughly reviewed to ensure it meets quality and security standards."
     },

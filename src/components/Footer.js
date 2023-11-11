@@ -17,7 +17,7 @@ const Footer = () => {
               className="block cursor-pointer"
               to={"fintech"}
               smooth={true}
-              offset={-100}
+              offset={-118}
               duration={500}
               onClick={() => {
                 navigate("/")
@@ -29,7 +29,7 @@ const Footer = () => {
               className="block cursor-pointer"
               to={"mobile"}
               smooth={true}
-              offset={-100}
+              offset={-118}
               duration={500}
               onClick={() => {
                 navigate("/")
@@ -41,7 +41,7 @@ const Footer = () => {
               className="block cursor-pointer"
               to={"ussd"}
               smooth={true}
-              offset={-100}
+              offset={-118}
               duration={500}
               onClick={() => {
                 navigate("/")
@@ -58,7 +58,7 @@ const Footer = () => {
               className="block cursor-pointer"
               to={"about"}
               smooth={true}
-              offset={-100}
+              offset={-118}
               duration={500}
               onClick={() => {
                 navigate("/")
@@ -70,7 +70,7 @@ const Footer = () => {
               className="block cursor-pointer"
               to={"portfolio"}
               smooth={true}
-              offset={-100}
+              offset={-118}
               duration={500}
               onClick={() => {
                 navigate("/")
@@ -82,7 +82,7 @@ const Footer = () => {
               className="block cursor-pointer"
               to={"contact"}
               smooth={true}
-              offset={-100}
+              offset={-118}
               duration={500}
               onClick={() => {
                 navigate("/")
