@@ -4,7 +4,7 @@ import { Link } from "react-scroll"
 const Footer = () => {
   const navigate = useNavigate()
   return (
-    <footer className="bg-white px-[var(--page-margin,5rem)] ">
+    <footer className="bg-white  ">
       <div className="container mx-auto flex flex-col sm:flex-row flex-wrap gap-10 justify-between w-full py-20 pb-5">
         <div className="flex-1 sm:basis-[40%] md:basis-[0%] flex flex-col justify-center item-center">
           <img src="/img/brand/logoOnly.png" alt="logo" className="object-contain h-20 w-20" />
@@ -16,9 +16,9 @@ const Footer = () => {
             <Link
               className="block cursor-pointer"
               to={"fintech"}
-              smooth={true}
+              // smooth={true}
               offset={-118}
-              duration={500}
+              // duration={500}
               onClick={() => {
                 navigate("/")
               }}
@@ -28,9 +28,9 @@ const Footer = () => {
             <Link
               className="block cursor-pointer"
               to={"mobile"}
-              smooth={true}
+              // smooth={true}
               offset={-118}
-              duration={500}
+              // duration={500}
               onClick={() => {
                 navigate("/")
               }}
@@ -40,9 +40,9 @@ const Footer = () => {
             <Link
               className="block cursor-pointer"
               to={"ussd"}
-              smooth={true}
+              // smooth={true}
               offset={-118}
-              duration={500}
+              // duration={500}
               onClick={() => {
                 navigate("/")
               }}
@@ -57,9 +57,9 @@ const Footer = () => {
             <Link
               className="block cursor-pointer"
               to={"about"}
-              smooth={true}
+              // smooth={true}
               offset={-118}
-              duration={500}
+              // duration={500}
               onClick={() => {
                 navigate("/")
               }}
@@ -69,9 +69,9 @@ const Footer = () => {
             <Link
               className="block cursor-pointer"
               to={"portfolio"}
-              smooth={true}
+              // smooth={true}
               offset={-118}
-              duration={500}
+              // duration={500}
               onClick={() => {
                 navigate("/")
               }}
@@ -81,9 +81,9 @@ const Footer = () => {
             <Link
               className="block cursor-pointer"
               to={"contact"}
-              smooth={true}
+              // smooth={true}
               offset={-118}
-              duration={500}
+              // duration={500}
               onClick={() => {
                 navigate("/")
               }}
@@ -93,7 +93,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <p className="text-center mt-16 border-t p-4">2023 Falcon Technologies All Rights Reserved</p>
+      <p className="text-center mt-16 border-t py-4">2023 Falcon Technologies All Rights Reserved</p>
     </footer>
   )
 }

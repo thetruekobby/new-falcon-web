@@ -8,16 +8,16 @@ const Team = () => {
     window.location.hash = location?.state?.section
   }, [])
   return (
-    <div className="container mx-auto pt-10">
+    <section className="container mx-auto pt-10">
       <h1 className="section-title text-center">Meet Our Team</h1>
-      <div className="">
+      <div className="text-justify lg:text-left">
         {ourTeam.teams.map((member, index) => (
           <div
             key={index}
             id={member.id}
-            className="relative bg-gray-100 shadow-[0_0_20px_10px_theme('colors.gray.100')] mt-32 w-[60%] mx-auto px-24 py-10 last:hidden"
+            className="relative bg-gray-100 shadow-[0_0_20px_10px_theme('colors.gray.100')] mt-32 w-[90%] xl:w-[60%] mx-auto  px-5 lg:px-24 pb-10 pt-28 lg:pt-10 last:hidden"
           >
-            <div className="absolute min-w-[160px] w-[20%] aspect-[1/1.1] -left-20 -top-20 shadow-md rounded overflow-hidden bg-orange-50">
+            <div className="absolute min-w-[160px] max-w-[200px] w-[80%] lg:w-[20%] aspect-square lg:aspect-[1/1.1] left-0   lg:-left-20 -top-20 shadow-md rounded overflow-hidden bg-orange-50">
               <img src={member.image} alt="team member" className="w-full h-full object-cover object-center" />
             </div>
             <div className="">
@@ -29,7 +29,7 @@ const Team = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   )
 }
 

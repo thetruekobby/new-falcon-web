@@ -5,9 +5,9 @@ import { useNavigate } from "react-router-dom"
 const AboutUs = () => {
   const navigate = useNavigate()
   return (
-    <section id="about" className="bg-gray-50  px-[var(--page-margin)] ">
+    <section id="about" className="bg-gray-50  ">
       <div className="container mx-auto">
-        <div className="flex flex-col items-start md:flex-row gap-5 pr-4 py-14 pt-20 min-h-[calc(100vh_-_var(--header-height,100px))]">
+        <div className="flex flex-col md:flex-row gap-5 pr-4 py-14 pt-20 min-h-[calc(100vh_-_var(--header-height,100px))]">
           <div className="flex-[1] lg:flex-1 order-last md:order-first ">
             <h1 style={{ textAlign: "left" }} className="section-title mb-4 fade-in ">
               About Us
@@ -23,8 +23,8 @@ const AboutUs = () => {
               </p>
             </div>
           </div>
-          <div className="flex-1 order-first md:order-last z-10 img-outline-right">
-            <img src="/img/stock/code-snippets.png" alt="" className="w-full object-contain max-h-[350px] " />
+          <div className="flex-1 order-first md:order-last z-10 img-outline-right max-h-[350px]">
+            <img src="/img/stock/code-snippets.png" alt="" className="w-full h-full object-cover object-[0_0]  " />
           </div>
         </div>
         <div className="py-12">

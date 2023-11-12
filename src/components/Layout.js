@@ -7,7 +7,7 @@ import { useEffect, useRef } from "react"
 const Layout = ({ testRef }) => {
   return (
     <div className="bg-white">
-      <NavBar testRef={testRef} />
+      <NavBar  />
       <div className="mt-[var(--nav-height)]">
         <Outlet />
       </div>

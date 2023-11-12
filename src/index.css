@@ -23,6 +23,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+section{
+  @apply min-h-[calc(100vh-var(--nav-height))];
+}
+section,
+footer,
+nav {
+  @apply px-5 sm:px-10  lg:px-20;
+}
+footer * {
+  @apply text-center sm:text-left;
+}
+
 .btn-primary {
   @apply bg-black/90 hover:bg-black/100 cursor-pointer select-none text-white font-semibold capitalize p-2 rounded whitespace-nowrap px-5;
 }
@@ -85,9 +97,9 @@ body {
   animation: slide-in2 0.7s ease-out var(--delay, 0s);
 }
 
-.methodology-card {
-  @apply relative bg-white rounded hover:shadow-md border col-span-11 sm:col-span-4 lg:col-span-4 flex flex-col gap-5 pb-5 items-center;
-}
+/* .methodology-card {
+  @apply ;
+} */
 /* .methodology-card::before {
   @apply w-full block h-3 top-0 left-0 bg-black;
 } */
@@ -112,8 +124,12 @@ body {
   @apply font-medium mt-4;
 }
 
+.form-control {
+  @apply col-span-2 xl:col-span-1;
+}
+
 .form-label {
-  @apply block mt-3 capitalize text-base;
+  @apply block mt-3 capitalize text-base whitespace-nowrap;
 }
 
 /* .form-label::after {

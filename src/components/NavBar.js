@@ -48,26 +48,27 @@ const NavBar = () => {
   }, [])
 
   const openMobileNav = () => {
-    document.querySelector("body").style.overflowY = "hidden"
+    // document.querySelector("body").style.overflowY = "hidden"
     mobileNav.current.classList.add("show")
   }
   const closeMobileNav = () => {
-    document.querySelector("body").style.overflowY = "visible"
+    // document.querySelector("body").style.overflowY = "visible"
     mobileNav.current.classList.remove("show")
   }
 
   return (
-    <nav id="nav" ref={nav} className="bg-white fixed left-0 top-0 right-0 z-50 border-b border-gray-100 px-[var(--page-margin,3rem)]">
+    <nav id="nav" ref={nav} className="bg-white fixed left-0 top-0 right-0 z-50 border-b border-gray-100">
       <div className="container flex justify-between items-center py-3 mx-auto">
         <NavLink to="/" className="flex flex-row items-center cursor-pointer" reloadDocument>
-          <img src="/img/brand/logoOnly.png" alt="logo" className="object-contain h-10 md:h-20 aspect-1" />
-          <span className="hidden lg:block text-2xl font-bold">Falcon Technologies</span>
+          <img src="/img/brand/logoOnly.png" alt="logo" className="object-contain h-10 md:h-20" />
+          <span className="  md:hidden xl:block text-lg xl:text-2xl font-bold">Falcon Technologies</span>
         </NavLink>
         <ul className="items-center gap-5 capitalize text-xl whitespace hidden md:flex ">
           {navOptions.map((option, index) => (
             <Link
               key={index}
               to={option.id}
+              // to={option.id}
               // spy={true}
               //smooth has been commented out because it is being handled by the css
               // smooth={true}
@@ -83,7 +84,8 @@ const NavBar = () => {
               // scroll.scrollTo(testRef)
               // }}
               onClick={() => {
-                if (location.pathname === "/") return
+                if (location.pathname === "/") return window.history.replaceState({}, document.title, window.location.href.split("#")[0])
+
                 navigate("/", { state: { hash: option.id } })
               }}
               className={option.id === "contact" ? "btn-primary" : "p-2 font-semibold whitespace-nowrap cursor-pointer"}
@@ -94,28 +96,27 @@ const NavBar = () => {
         </ul>
         <HiOutlineMenu size={30} className="md:hidden cursor-pointer" onClick={openMobileNav} />
         {/* mobile menu */}
-        <div
-          ref={mobileNav}
-          className="mobile-nav md:hidden fixed top-0 right-0 h-screen w-4/5 bg-white px-4 py-4 capitalize translate-x-full transition-transform"
-        >
-          <IoCloseSharp size={30} className="ml-auto cursor-pointer" onClick={closeMobileNav} />
-          <ul>
-            {navOptions.map((option, i) => (
-              <Link
-                key={i}
-                to={option.id}
-                // spy={true}
-                //smooth has been commented out because it is being handled by the css
-                // smooth={true}
-                offset={-nav?.current?.offsetHeight}
-                // duration={500}
-                className="mb-2 block"
-                onClick={closeMobileNav}
-              >
-                {option.label}
-              </Link>
-            ))}
-          </ul>
+        <div ref={mobileNav} className="mobile-nav md:hidden fixed inset-0  capitalize translate-x-full transition-transform bg-black/10">
+          <div className="ml-auto w-4/5 h-full bg-white px-4 py-4">
+            <IoCloseSharp size={30} className="ml-auto cursor-pointer" onClick={closeMobileNav} />
+            <ul>
+              {navOptions.map((option, i) => (
+                <Link
+                  key={i}
+                  to={option.id}
+                  // spy={true}
+                  //smooth has been commented out because it is being handled by the css
+                  // smooth={true}
+                  offset={-nav?.current?.offsetHeight}
+                  // duration={500}
+                  className="mb-2 block"
+                  onClick={closeMobileNav}
+                >
+                  {option.label}
+                </Link>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </nav>

@@ -2,9 +2,9 @@ import React from "react"
 
 const BTServices = () => {
   return (
-    <section id="services" className="px-[var(--page-margin,5rem)]  py-8">
+    <section id="services" className="  py-8">
       <h1 className="section-title mb-20 fade-in">Our Services</h1>
-      <div className="flex flex-col md:flex-row gap-5 items-start pr-14 pb-20">
+      <div className="flex flex-col md:flex-row gap-5  lg:pr-14 pb-20">
         <div className="flex-[2] lg:flex-[2] order-last ">
           <div className="">
             <h2 id="fintech" className="section-subtitle fade-in mb-4">
@@ -17,11 +17,11 @@ const BTServices = () => {
             </p>
           </div>
         </div>
-        <div className="img-outline-left flex-1 order-first 2 z-10">
-          <img src="/img/stock/app.jpg" alt="" className="w-full max-h-64 object-cover object-center" />
+        <div className="img-outline-left flex-1  order-first 2 z-10">
+          <img src="/img/stock/app.jpg" alt="" className="w-full h-full object-cover object-center" />
         </div>
       </div>
-      <div className="flex flex-col md:flex-row gap-5 items-start px-12 pr-14 py-14 pt-20">
+      <div className="flex flex-col md:flex-row gap-5  px-lg:pr-14 py-14 pt-20">
         <div className="flex-[2] lg:flex-[2] order-last md:order-first ">
           <div className="">
             <h2 id="mobile" className="section-subtitle mb-4 fade-in">
@@ -35,10 +35,10 @@ const BTServices = () => {
           </div>
         </div>
         <div className="img-outline-right flex-1 order-first md:order-last 2 z-10">
-          <img src="/img/stock/programmer.jpg" alt="web development" className="w-full object-cover object-center" />
+          <img src="/img/stock/programmer.jpg" alt="web development" className="w-full h-full object-cover object-center" />
         </div>
       </div>
-      <div className="flex flex-col md:flex-row gap-5 items-start pr-14 py-14 pt-20">
+      <div className="flex flex-col md:flex-row gap-5 items-stalg:pr-14 py-14 pt-20">
         <div className="flex-[2] lg:flex-[2] order-last ">
           <div className="">
             <h2 id="ussd" className="section-subtitle mb-4 fade-in">
@@ -52,7 +52,7 @@ const BTServices = () => {
           </div>
         </div>
         <div className="img-outline-left flex-1 order-first 2 z-10">
-          <img src="/img/stock/ussd1.jpg" alt="" className="w-full object-cover object-center" />
+          <img src="/img/stock/ussd1.jpg" alt="" className="w-full h-full object-cover object-center" />
         </div>
       </div>
     </section>

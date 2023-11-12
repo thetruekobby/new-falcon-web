@@ -45,7 +45,7 @@ const ContactUs = ({ testRef }) => {
   }
 
   return (
-    <section ref={testRef} id="contact" className="pt-7 px-[var(--page-margin,5rem)]">
+    <section ref={testRef} id="contact" className="pt-7 ">
       <h1 className="section-title mb-10 fade-in">Contact Us</h1>
 
       {/* <p className="text-center my-5 text-[var(--clr-text-secondary)] text-lg">
@@ -80,7 +80,7 @@ const ContactUs = ({ testRef }) => {
           <p>Mon – Fri: 8 AM – 5 PM Sat – Sun: Closed.</p>
         </div>
       </div>
-      <div className="pt-5 pb-10 px-10 bg-gray-100">
+      <div className="pt-5 pb-10 px-4 md:px-10 bg-gray-100">
         <h3 className="text-2xl font-bold mb-5 mt-7">Get In Touch</h3>
         {/* <p className=" text-lg text-[var(--clr-text-secondary)] font-medium m-5 text-center">
           Thank you for your interest in Falcon Technologies. Please provide the following information about your business needs. This information
@@ -88,7 +88,7 @@ const ContactUs = ({ testRef }) => {
         </p> */}
         <div id="get-in-touch" className="flex flex-col md:flex-row gap-8 ">
           <form action="" onSubmit={handleSubmit} noValidate className="flex-1 grid grid-cols-2 gap-4">
-            <div>
+            <div className="form-control">
               <label htmlFor="name" className="form-label">
                 your name
               </label>
@@ -106,7 +106,7 @@ const ContactUs = ({ testRef }) => {
               />
               <div className="error">{errors?.name}</div>
             </div>
-            <div>
+            <div className="form-control">
               <label htmlFor="email" className="form-label">
                 your email address
               </label>
@@ -124,7 +124,7 @@ const ContactUs = ({ testRef }) => {
               />
               <div className="error">{errors?.email}</div>
             </div>
-            <div>
+            <div className="form-control">
               <label htmlFor="subject" className="form-label">
                 subject
               </label>
@@ -141,7 +141,7 @@ const ContactUs = ({ testRef }) => {
               />
               <div className="error">{errors?.subject}</div>
             </div>
-            <div>
+            <div className="form-control">
               <label htmlFor="number" className="form-label">
                 your phone number
               </label>
@@ -165,7 +165,7 @@ const ContactUs = ({ testRef }) => {
               <textarea
                 name="description"
                 id="desc"
-                className="w-full border outline-none p-3 rounded mt-3"
+                className="w-full border outline-none p-3 rounded mt-3 text-base"
                 placeholder="Type your message here"
                 value={payload.description}
                 onChange={(e) => {
