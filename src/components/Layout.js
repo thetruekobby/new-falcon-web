@@ -5,13 +5,14 @@ import Footer from "./Footer"
 import { useEffect, useRef } from "react"
 
 const Layout = ({ testRef }) => {
+  const nav = useRef()
   return (
     <div className="bg-white">
-      <NavBar  />
+      <NavBar nav={nav} />
       <div className="mt-[var(--nav-height)]">
         <Outlet />
       </div>
-      <Footer />
+      <Footer nav={nav} />
     </div>
   )
 }

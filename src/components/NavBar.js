@@ -5,7 +5,7 @@ import { useLocation, useNavigate, NavLink } from "react-router-dom"
 import { HiOutlineMenu } from "react-icons/hi"
 import { IoCloseSharp } from "react-icons/io5"
 
-const NavBar = () => {
+const NavBar = ({nav}) => {
   const location = useLocation()
   const navOptions = [
     { label: "home", id: "hero" },
@@ -21,7 +21,7 @@ const NavBar = () => {
   console.log("🚀 ~ file: NavBar.js:22 ~ NavBar ~ checker:", checker)
   const mobileNav = useRef()
 
-  const nav = useRef()
+ 
 
   const removeTransition = () => {
     if (checker.current !== 0) return
@@ -56,6 +56,12 @@ const NavBar = () => {
     mobileNav.current.classList.remove("show")
   }
 
+  const updateUrl = (option) => {
+    if (location.pathname === "/") return window.history.replaceState({}, document.title, window.location.href.split("#")[0])
+
+    navigate("/", { state: { hash: option.id } })
+  }
+
   return (
     <nav id="nav" ref={nav} className="bg-white fixed left-0 top-0 right-0 z-50 border-b border-gray-100">
       <div className="container flex justify-between items-center py-3 mx-auto">
@@ -72,7 +78,7 @@ const NavBar = () => {
               // spy={true}
               //smooth has been commented out because it is being handled by the css
               // smooth={true}
-              offset={-118}
+              offset={-nav?.current?.offsetHeight}
               // duration={500}
               // onClick={() => {
               // scroll.scrollTo(300)
@@ -84,9 +90,7 @@ const NavBar = () => {
               // scroll.scrollTo(testRef)
               // }}
               onClick={() => {
-                if (location.pathname === "/") return window.history.replaceState({}, document.title, window.location.href.split("#")[0])
-
-                navigate("/", { state: { hash: option.id } })
+                updateUrl(option)
               }}
               className={option.id === "contact" ? "btn-primary" : "p-2 font-semibold whitespace-nowrap cursor-pointer"}
             >
@@ -110,7 +114,10 @@ const NavBar = () => {
                   offset={-nav?.current?.offsetHeight}
                   // duration={500}
                   className="mb-2 block"
-                  onClick={closeMobileNav}
+                  onClick={() => {
+                    closeMobileNav()
+                    updateUrl(option)
+                  }}
                 >
                   {option.label}
                 </Link>
