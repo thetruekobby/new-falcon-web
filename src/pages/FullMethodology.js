@@ -4,10 +4,10 @@ import { useLocation } from "react-router-dom"
 
 const FullMethodology = () => {
   const location = useLocation()
-  useEffect(() => {
-    if (!location?.state?.section) return
-    window.location.hash = location?.state?.section
-  }, [])
+  // useEffect(() => {
+  //   if (!location?.state?.section) return
+  //   window.location.hash = location?.state?.section
+  // }, [])
   return (
     <section id="full-methodology" className="container mx-auto pt-10">
       <h1 className="section-title text-center">Our Methodology</h1>

@@ -36,7 +36,7 @@ const AboutUs = () => {
                 style={{ "--delay": `${i * 0.1}s` }}
                 className="bg-white border rounded-lg overflow-hidden cursor-pointer hover:shadow-md fade-in col-span-12 sm:col-span-6 lg:col-span-3 xl:col-span-2"
                 onClick={() => {
-                  navigate("/team", { state: { section: team.id } })
+                  navigate("/team", { state: { hash: team.id } })
                 }}
               >
                 <div className="bg-orange-50">

@@ -8,7 +8,7 @@ const ScrollToTop = () => {
     document.documentElement.style.scrollPadding = "var(--nav-height)"
   } else {
     document.title = `Falcon Technologies | ${pathname.charAt(1).toUpperCase() + pathname.slice(2)}`
-    document.documentElement.style.scrollPadding = "200px"
+    document.documentElement.style.scrollPadding = "calc(var(--nav-height) + 128px)"
   }
 
   useEffect(() => {

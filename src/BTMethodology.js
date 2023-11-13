@@ -15,7 +15,7 @@ const BTMethodology = () => {
             key={index}
             className="relative bg-white rounded hover:shadow-md border col-span-12 sm:col-span-6 lg:col-span-4 flex flex-col gap-5 pb-5 items-center  px-3 pt-3 cursor-pointer fade-in"
             onClick={() => {
-              navigate("/methodology", { state: { section: methodology.id } })
+              navigate("/methodology", { state: { hash: methodology.id } })
             }}
           >
             {/* <PiListChecksBold size={30} /> */}

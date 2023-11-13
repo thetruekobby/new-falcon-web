@@ -8,6 +8,7 @@ import { useNavbarContext } from "../context/NavBarContext"
 
 const NavBar = ({ nav }) => {
   const location = useLocation()
+  console.log("🚀 ~ file: NavBar.js:11 ~ NavBar ~ location:", location)
   const { navHeight, setNavHeight } = useNavbarContext()
   const navOptions = [
     { label: "home", id: "hero" },
@@ -18,12 +19,9 @@ const NavBar = ({ nav }) => {
   ]
 
   const navigate = useNavigate()
-  // const [navHeight, setNavHeight] = useState(118)
 
   const checker = useRef(0)
-  console.log("🚀 ~ file: NavBar.js:22 ~ NavBar ~ checker:", checker)
   const mobileNav = useRef()
-
 
   // const removeTransition = () => {
   //   if (checker.current !== 0) return
@@ -46,7 +44,6 @@ const NavBar = ({ nav }) => {
     }
   }
   useEffect(() => {
-    handleToggleHash()
     const setHeaderHeight = () => {
       document.documentElement.style.setProperty("--nav-height", nav.current.offsetHeight + "px")
       setNavHeight(nav.current.offsetHeight)
@@ -57,6 +54,11 @@ const NavBar = ({ nav }) => {
       window.removeEventListener("resize", setHeaderHeight)
     }
   }, [])
+
+  useEffect(() => {
+    if (!location?.state?.hash) return
+    window.location.hash = location?.state?.hash
+  }, [location])
 
   const openMobileNav = () => {
     // document.querySelector("body").style.overflowY = "hidden"

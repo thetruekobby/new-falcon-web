@@ -21,7 +21,7 @@ const Header = () => {
     <section id="hero" className="bg-gray-100 ">
       <div className="container flex flex-col md:flex-row gap-5 items-center pr-4 py-14 pt-20 mx-auto">
         <div className="flex-[1] lg:flex-1 order-last md:order-first animate-slide-in">
-          <h1 className="capitalize font-bold text-5xl mb-4">software solutions for ambitious ideas</h1>
+          <h1 className="capitalize font-bold text-3xl sm:text-5xl mb-4">software solutions for ambitious ideas</h1>
           <h2 className="font-semibold text-[var(--clr-text-secondary)] text-2xl mb-10">
             Unleashing the power of code to transform your vision to reality.
           </h2>
