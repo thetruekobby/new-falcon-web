@@ -5,7 +5,7 @@
       "image": "/img/team/bm-removebg-preview.png",
       "object-position": "0% 30%",
       "name": "Benjamin Mensah",
-      "position": "Project Manager",
+      "position": "Project Director",
       "profile": "Benjamin Mensah is a seasoned professional with an extensive 20-year career within the ICT (Information and Communications Technology) sector, holding pivotal roles across various esteemed organizations.",
       "employment": "2 years"
     },
@@ -15,7 +15,7 @@
       "object-position": "0% 0%",
       "name": "James Amo",
       "position": "Backend Team Lead",
-      "profile": "James Amo is a highly experienced Full Stack Developer with an extensive career spanning over a decade within the ICT (Information and Communications Technology) sector. He has held diverse roles primarily focusing on software development, systems integration, and business intelligence across various international locations.",
+      "profile": "James Amo is a highly experienced Full Stack Developer with an extensive career spanning over a decade within the ICT (Information and Communications Technology) sector. He has held diverse roles primarily focusing on software development, systems integration, and business intelligence across multiple countries.",
       "employment": "2 years"
     },
     {
@@ -24,7 +24,7 @@
       "object-position": "0% -10%",
       "name": "Thomas Davis",
       "position": "Frontend Team Lead",
-      "profile": "Thomas Davis is a highly experienced Full Stack Developer with an expertise in Mobile & Web Portals applications development using React-Native for Android and iOS, and web development with ReactJS, NextJS, Bootstrap, and UI-UX design. His career spans across diverse roles focusing primarily on full-stack development.",
+      "profile": "Thomas Davis is a highly experienced Full Stack Developer with expertise in Mobile & Web applications development. He has excellent skills using React-Native, ReactJS, NextJS and Bootstrap. He is also a great UI/UX designer. His career spans across diverse roles and in multiple countries.",
       "employment": "2 years"
     },
     {
@@ -33,7 +33,7 @@
       "object-position": "0% 50%",
       "name": "Aziz Adams",
       "position": "Senior Backend Engineer",
-      "profile": "Abdul Aziz Adams possesses a wealth of experience in backend development within the telecommunications and banking sectors, showcasing expertise in a range of programming languages, development methodologies, and system management. His commitment to ongoing learning and certification further enriches his technical prowess in the field of Information and Communications Technology.",
+      "profile": "Abdul Aziz Adams possesses a wealth of experience in backend development within the telecommunications and banking sectors, showcasing expertise in a range of programming languages, development methodologies, and system management. His commitment to ongoing learning and certification further enriches his technical prowess.",
       "employment": "2 years"
     },
     {
@@ -42,15 +42,7 @@
       "object-position": "0% 0%",
       "name": "John Tanko",
       "position": "Senior Frontend Engineer",
-      "profile": "John Tanko's career in the Information and Communications Technology domain, especially within the telecommunications sector, showcases a robust skill set in frontend and full-stack development. His expertise in various programming languages and frameworks, along with a solid educational background, underlines his capabilities in delivering comprehensive solutions and enhancing user experiences.",
-      "employment": "2 years"
-    },
-    {
-      "id": 5,
-      "object-position": "0% 0%",
-      "name": "John Tanko",
-      "position": "Senior Frontend Engineer",
-      "profile": "John Tanko's career in the Information and Communications Technology domain, especially within the telecommunications sector, showcases a robust skill set in frontend and full-stack development. His expertise in various programming languages and frameworks, along with a solid educational background, underlines his capabilities in delivering comprehensive solutions and enhancing user experiences.",
+      "profile": "John Tanko's career in the Information and Communications Technology domain, especially within the telecommunications sector, showcases a robust skill set in frontend and full-stack development. His expertise in various programming languages and frameworks, underlines his capabilities in delivering comprehensive solutions and enhancing user experiences.",
       "employment": "2 years"
     }
   ],
@@ -59,7 +51,7 @@
       "id": 1,
       "name": "Requirements Gathering",
       "image": "/img/stock/pexels2.jpg",
-      "description": "In this initial stage, our development team work closely with our clients to understand and document the requirements of the software. This includes functional and non-functional requirements. The outcome of this stage is a detailed requirements specification that serves as the foundation for the project."
+      "description": "In this initial stage, our solution architect and development team work closely with our clients to understand and document the requirements. This includes functional and non-functional requirements. The outcome of this stage is a detailed requirements specification that serves as the foundation for the project."
     },
     {
       "id": 2,
@@ -72,7 +64,7 @@
       "name": "Design",
       "test": "design",
       "image": "/img/stock/pexels-kampus.jpg",
-      "description": "During the design stage, the software architecture and high-level design are developed based on the requirements gathered earlier. Detailed designs for each component of the software are created, specifying how they will interact, data structures, algorithms, and user interfaces. Our design documentation is crucial for guiding the development phase."
+      "description": "During the design stage, the software architecture and high-level design are developed based on the requirements gathered. Detailed designs for each component of the software are created, specifying how they will interact, data structures, algorithms, and user interfaces. Our design documentation is crucial for guiding the development phase."
     },
     {
       "id": 4,
@@ -84,7 +76,7 @@
       "id": 5,
       "name": "Testing",
       "image": "/img/stock/pexels-gustavo.jpg",
-      "description": "The testing phase is where the software is rigorously tested to identify and fix defects and ensure it functions as expected. Various testing types are employed, including unit testing, integration testing, system testing, and user acceptance testing (UAT)"
+      "description": "In this stage we rigorously test the software to identify and fix defects and ensure it functions as expected. Various testing types are employed, including unit testing, integration testing, system testing, and user acceptance testing (UAT)"
     },
     {
       "id": 6,

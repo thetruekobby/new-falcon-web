@@ -4,7 +4,7 @@ import NavBar from "./NavBar"
 import Footer from "./Footer"
 import { useEffect, useRef } from "react"
 
-const Layout = ({ testRef }) => {
+const Layout = () => {
   const nav = useRef()
   return (
     <div className="bg-white">

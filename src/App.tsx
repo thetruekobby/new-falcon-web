@@ -4,7 +4,7 @@ import Home from "./pages/Home"
 import FullMethodology from "./pages/FullMethodology"
 import Team from "./pages/Team"
 import NotFound from "./pages/NotFound"
-import { useRef } from "react"
+import { useRef, useState } from "react"
 
 const App = () => {
   // const location = useLocation()
@@ -16,8 +16,8 @@ const App = () => {
   return (
     <div className="overflow-x-hidden">
       <Routes>
-        <Route element={<Layout testRef={testRef} />}>
-          <Route index element={<Home testRef={testRef} />} />
+        <Route element={<Layout />}>
+          <Route index element={<Home  />} />
           <Route path="/team" element={<Team />} />
           <Route path="/methodology" element={<FullMethodology />} />
           <Route path="*" element={<NotFound />} />

@@ -11,13 +11,13 @@ const BTServices = () => {
               Fintech solutions
             </h2>
             <p className="fade-in">
-              Falcon Technologies is a forward-thinking fintech company driven by a passion for innovation. With a commitment to delivering
-              cutting-edge solutions, we have become a trusted partner for those seeking to leverage technology for busines success. Our fintech
-              solution offers a wide range of financial services, including digital wallets, payment processing, and financial education.
+              Falcon Technologies is a forward-thinking software development company driven by a passion for innovation. With a commitment to
+              delivering cutting-edge solutions, we have become a trusted partner for those seeking to leverage technology for busines success. Our
+              fintech solution offers a wide range of financial services, including digital wallets and payment processing.
             </p>
           </div>
         </div>
-        <div className="img-outline-left flex-1  order-first 2 z-10">
+        <div className="img-outline-left flex-1  order-first max-h-[400px] z-10 overflow-hidden">
           <img src="/img/stock/app.jpg" alt="" className="w-full h-full object-cover object-center" />
         </div>
       </div>
@@ -28,9 +28,10 @@ const BTServices = () => {
               mobile and web app development
             </h2>
             <p className="fade-in">
-              Our team of skilled developers, designers, and strategists has extensive experience in building mobile apps across various platforms and
-              industries. We prioritize user experience and design, ensuring that your app is not only functional but also visually appealing and
-              intuitive. We stay up to date with the latest mobile technologies and trends to provide you with the most advanced solutions.
+              Our team of skilled developers, designers, and strategists have extensive experience in building mobile and web apps across various
+              platforms and industries. We prioritize user experience and design, ensuring that your app is not only functional but also visually
+              appealing and intuitive. We stay up to date with the latest mobile technologies and trends to provide you with the most advanced
+              solutions.
             </p>
           </div>
         </div>
@@ -45,14 +46,16 @@ const BTServices = () => {
               USSD Technology
             </h2>
             <p className="fade-in">
-              Falcon Technologies USSD Developer is a leading USSD development company that thrives on innovation and technical excellence. With a
-              deep understanding of USSD technology, we create interactive and efficient USSD solutions. Our team of USSD experts brings a wealth of
-              experience in developing USSD applications across various sectors, including finance, healthcare, education, and more.
+              Falcon Technologies is a leading USSD development company that thrives on innovation and technical excellence. With a deep understanding
+              of USSD technology, we create interactive and efficient USSD solutions. Our team of USSD experts brings a wealth of experience in
+              developing USSD applications across various sectors, including finance, healthcare, education, and more. <br />
+              We prioritize user experience and design, ensuring that your app is not only functional but also visually appealing and intuitive. We
+              stay up to date with the latest mobile technologies and trends to provide you with the most advanced solutions.
             </p>
           </div>
         </div>
         <div className="img-outline-left flex-1 order-first 2 z-10">
-          <img src="/img/stock/ussd1.jpg" alt="" className="w-full h-full object-cover object-center" />
+          <img src="/img/stock/ussd1.jpg" alt="" className="w-full h-full object-cover object-[20%_0]" />
         </div>
       </div>
     </section>

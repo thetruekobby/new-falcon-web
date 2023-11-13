@@ -1,8 +1,10 @@
 import { useNavigate } from "react-router-dom"
 import { Link } from "react-scroll"
+import { useNavbarContext } from "../context/NavBarContext"
 
-const Footer = ({nav}) => {
+const Footer = ({ nav }) => {
   const navigate = useNavigate()
+  const { navHeight } = useNavbarContext()
   return (
     <footer className="bg-white  ">
       <div className="container mx-auto flex flex-col sm:flex-row flex-wrap gap-10 justify-between w-full py-20 pb-5">
@@ -17,7 +19,7 @@ const Footer = ({nav}) => {
               className="block cursor-pointer"
               to={"fintech"}
               // smooth={true}
-              offset={-nav?.current?.offsetHeight-10}
+              offset={-navHeight - 10}
               // duration={500}
               onClick={() => {
                 navigate("/")
@@ -29,7 +31,7 @@ const Footer = ({nav}) => {
               className="block cursor-pointer"
               to={"mobile"}
               // smooth={true}
-              offset={-nav?.current?.offsetHeight-10}
+              offset={-navHeight - 10}
               // duration={500}
               onClick={() => {
                 navigate("/")
@@ -41,7 +43,7 @@ const Footer = ({nav}) => {
               className="block cursor-pointer"
               to={"ussd"}
               // smooth={true}
-              offset={-nav?.current?.offsetHeight-10}
+              offset={-navHeight - 10}
               // duration={500}
               onClick={() => {
                 navigate("/")
@@ -58,7 +60,7 @@ const Footer = ({nav}) => {
               className="block cursor-pointer"
               to={"about"}
               // smooth={true}
-              offset={-nav?.current?.offsetHeight}
+              offset={-navHeight}
               // duration={500}
               onClick={() => {
                 navigate("/")
@@ -70,7 +72,7 @@ const Footer = ({nav}) => {
               className="block cursor-pointer"
               to={"portfolio"}
               // smooth={true}
-              offset={-nav?.current?.offsetHeight}
+              offset={-navHeight}
               // duration={500}
               onClick={() => {
                 navigate("/")
@@ -82,7 +84,7 @@ const Footer = ({nav}) => {
               className="block cursor-pointer"
               to={"contact"}
               // smooth={true}
-              offset={-nav?.current?.offsetHeight}
+              offset={-navHeight}
               // duration={500}
               onClick={() => {
                 navigate("/")

@@ -14,12 +14,12 @@ const AboutUs = () => {
             </h1>
             <div className="space-y-6 text-lg">
               <p className="fade-in">
-                Falcon Technologies is a forward-thinking web development company known for its technical expertise and commitment to excellence. We
-                bring creativity and innovation to every web project we undertake.
+                Falcon Technologies is a forward-thinking application development company known for its technical expertise and commitment to
+                excellence. We bring creativity and innovation to every project we undertake.
               </p>
               <p className="fade-in">
-                Our mission is to democratize web development by providing user-friendly and powerful software solutions that enable anyone to create
-                stunning websites and web applications.
+                Our mission is to democratize application development by providing user-friendly and powerful software solutions that enable anyone to
+                create stunning applications.
               </p>
             </div>
           </div>
@@ -29,12 +29,12 @@ const AboutUs = () => {
         </div>
         <div className="py-12">
           <h1 className="section-title text-center mb-14 fade-in">Meet Our Team</h1>
-          <div className="flex flex-col sm:flex-row justify-between mt-5 items-stretch gap-5 flex-wrap">
+          <div className="grid container mx-auto grid-cols-12 xl:grid-cols-10 sm:flex-row justify-around mt-5 items-stretch sm:gap-x-5 gap-y-5 flex-wrap">
             {ourTeam.teams.map((team, i) => (
               <div
                 key={i}
                 style={{ "--delay": `${i * 0.1}s` }}
-                className="bg-white border rounded-lg overflow-hidden cursor-pointer hover:shadow-md fade-in flex-1 basis-[40%] md:basis-[30%] xl:basis-0 last:invisible xl:last:hidden"
+                className="bg-white border rounded-lg overflow-hidden cursor-pointer hover:shadow-md fade-in col-span-12 sm:col-span-6 lg:col-span-3 xl:col-span-2"
                 onClick={() => {
                   navigate("/team", { state: { section: team.id } })
                 }}
@@ -44,7 +44,7 @@ const AboutUs = () => {
                     src={team.image}
                     // style={{ objectPosition: team["object-position"] }}
                     alt="Profile"
-                    className={`w-full h-48 object-contain object-center `}
+                    className={`w-full h-48 object-contain ${team.id === 3 ? "object-[center_30%]" : "object-center"} `}
                   />
                 </div>
                 <div className="p-3 text-center">

@@ -7,7 +7,7 @@ import ContactUs from "../ContactUs"
 import Header from "../components/Header"
 import { useLocation } from "react-router-dom"
 
-const Home = ({ testRef }) => {
+const Home = () => {
   const location = useLocation()
   useEffect(() => {
     const observeElements = document.querySelectorAll(".fade-in")
@@ -46,7 +46,7 @@ const Home = ({ testRef }) => {
       <BTServices />
       <BTMethodology />
       <BTPortfolio />
-      <ContactUs testRef={testRef} />
+      <ContactUs/>
     </div>
   )
 }

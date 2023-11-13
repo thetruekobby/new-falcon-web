@@ -10,7 +10,7 @@ const Team = () => {
   return (
     <section className="container mx-auto pt-10">
       <h1 className="section-title text-center">Meet Our Team</h1>
-      <div className="text-justify lg:text-left">
+      <div className="">
         {ourTeam.teams.map((member, index) => (
           <div
             key={index}
@@ -23,7 +23,7 @@ const Team = () => {
             <div className="">
               <p className="font-bold text-xl">{member.name}</p>
               <p className="font-semibold">{member.position}</p>
-              <p className="mb-2">With Falcon Technologies for {member.employment}</p>
+              {/* <p className="mb-2">With Falcon Technologies for {member.employment}</p> */}
               <p className="">{member.profile}</p>
             </div>
           </div>

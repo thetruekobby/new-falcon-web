@@ -1,12 +1,14 @@
 import { Link, animateScroll as scroll } from "react-scroll"
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import { useLocation, useNavigate, NavLink } from "react-router-dom"
 
 import { HiOutlineMenu } from "react-icons/hi"
 import { IoCloseSharp } from "react-icons/io5"
+import { useNavbarContext } from "../context/NavBarContext"
 
-const NavBar = ({nav}) => {
+const NavBar = ({ nav }) => {
   const location = useLocation()
+  const { navHeight, setNavHeight } = useNavbarContext()
   const navOptions = [
     { label: "home", id: "hero" },
     { label: "about us", id: "about" },
@@ -16,29 +18,38 @@ const NavBar = ({nav}) => {
   ]
 
   const navigate = useNavigate()
+  // const [navHeight, setNavHeight] = useState(118)
 
   const checker = useRef(0)
   console.log("🚀 ~ file: NavBar.js:22 ~ NavBar ~ checker:", checker)
   const mobileNav = useRef()
 
- 
 
-  const removeTransition = () => {
-    if (checker.current !== 0) return
-    console.log("🚀 ~ file: NavBar.js:35 ~ removeTransition ~ removeTransition:")
-    const elements = document.querySelectorAll(".fade-in")
-    elements.forEach((element) => {
-      element.classList.remove("fade-in")
-      // element.style.transitionProperty = "none"
-      // element.style.transform = "translateX(0)"
-      // element.style.opacity = "1"
-    })
-    checker.current = 1
+  // const removeTransition = () => {
+  //   if (checker.current !== 0) return
+  //   console.log("🚀 ~ file: NavBar.js:35 ~ removeTransition ~ removeTransition:")
+  //   const elements = document.querySelectorAll(".fade-in")
+  //   elements.forEach((element) => {
+  //     element.classList.remove("fade-in")
+  //     // element.style.transitionProperty = "none"
+  //     // element.style.transform = "translateX(0)"
+  //     // element.style.opacity = "1"
+  //   })
+  //   checker.current = 1
+  // }
+
+  const handleToggleHash = (option) => {
+    if (location.pathname === "/") {
+      window.history.replaceState({}, document.title, window.location.href.split("#")[0])
+    } else {
+      navigate("/", { state: { hash: option.id } })
+    }
   }
-
   useEffect(() => {
+    handleToggleHash()
     const setHeaderHeight = () => {
       document.documentElement.style.setProperty("--nav-height", nav.current.offsetHeight + "px")
+      setNavHeight(nav.current.offsetHeight)
     }
     setHeaderHeight()
     window.addEventListener("resize", setHeaderHeight)
@@ -54,12 +65,6 @@ const NavBar = ({nav}) => {
   const closeMobileNav = () => {
     // document.querySelector("body").style.overflowY = "visible"
     mobileNav.current.classList.remove("show")
-  }
-
-  const updateUrl = (option) => {
-    if (location.pathname === "/") return window.history.replaceState({}, document.title, window.location.href.split("#")[0])
-
-    navigate("/", { state: { hash: option.id } })
   }
 
   return (
@@ -78,7 +83,7 @@ const NavBar = ({nav}) => {
               // spy={true}
               //smooth has been commented out because it is being handled by the css
               // smooth={true}
-              offset={-nav?.current?.offsetHeight}
+              offset={-navHeight}
               // duration={500}
               // onClick={() => {
               // scroll.scrollTo(300)
@@ -90,7 +95,7 @@ const NavBar = ({nav}) => {
               // scroll.scrollTo(testRef)
               // }}
               onClick={() => {
-                updateUrl(option)
+                handleToggleHash(option)
               }}
               className={option.id === "contact" ? "btn-primary" : "p-2 font-semibold whitespace-nowrap cursor-pointer"}
             >
@@ -111,12 +116,12 @@ const NavBar = ({nav}) => {
                   // spy={true}
                   //smooth has been commented out because it is being handled by the css
                   // smooth={true}
-                  offset={-nav?.current?.offsetHeight}
+                  offset={-navHeight}
                   // duration={500}
-                  className="mb-2 block"
+                  className="mb-2 block cursor-pointer"
                   onClick={() => {
                     closeMobileNav()
-                    updateUrl(option)
+                    handleToggleHash(option)
                   }}
                 >
                   {option.label}
