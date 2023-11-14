@@ -38,9 +38,9 @@ const ContactUs = () => {
   }
 
   const handleSubmit = (e) => {
-    setLoading(true)
     e.preventDefault()    
     if (Object.keys(validate()).length !== 0) return
+    setLoading(true)
     emailjs
       .sendForm(
         process.env.REACT_APP_EMAIL_SERVICE_ID,
