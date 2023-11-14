@@ -23,6 +23,7 @@ const NavBar = ({ nav }) => {
   const checker = useRef(0)
   const mobileNav = useRef()
 
+
   // const removeTransition = () => {
   //   if (checker.current !== 0) return
   //   console.log("🚀 ~ file: NavBar.js:35 ~ removeTransition ~ removeTransition:")

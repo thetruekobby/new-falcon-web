@@ -1,12 +1,13 @@
-import React, { useState } from "react"
-import { IoLocationSharp } from "react-icons/io5"
+import React, { useRef, useState } from "react"
 import { HiOutlineMailOpen } from "react-icons/hi"
 import { BsFillPinMapFill } from "react-icons/bs"
 import { BsFillAlarmFill } from "react-icons/bs"
-import { FaClock } from "react-icons/fa"
 import { contactSchema } from "./util/FormValidations"
+import emailjs from "@emailjs/browser"
+import { ToastContainer, toast } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
 
-const ContactUs = ({ testRef }) => {
+const ContactUs = () => {
   const [payload, setPayload] = useState({
     name: "",
     email: "",
@@ -16,6 +17,9 @@ const ContactUs = ({ testRef }) => {
   })
 
   const [errors, setErrors] = useState({})
+  const [loading, setLoading] = useState(false)
+
+  const contactForm = useRef()
 
   const validate = () => {
     const validation = contactSchema.validate(payload, {
@@ -30,12 +34,38 @@ const ContactUs = ({ testRef }) => {
     })
 
     setErrors(errorList)
+    return errorList
   }
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    validate()
-    //send details after the validation
+    setLoading(true)
+    e.preventDefault()    
+    if (Object.keys(validate()).length !== 0) return
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_EMAIL_SERVICE_ID,
+        process.env.REACT_APP_EMAIL_TEMPLATE_ID,
+        contactForm.current,
+        process.env.REACT_APP_EMAIL_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          if (result.text === "OK") toast.success("Message sent")
+        },
+        (error) => {
+          toast.error("Please try again later")
+        }
+      )
+      .finally(() => {
+        setLoading(false)
+        setPayload({
+          name: "",
+          email: "",
+          subject: "",
+          mobile: "",
+          description: "",
+        })
+      })
   }
 
   const formOnChange = (key, value) => {
@@ -45,9 +75,8 @@ const ContactUs = ({ testRef }) => {
   }
 
   return (
-    <section ref={testRef} id="contact" className="pt-7 ">
+    <section id="contact" className="pt-7 ">
       <h1 className="section-title mb-10 fade-in">Contact Us</h1>
-
       {/* <p className="text-center my-5 text-[var(--clr-text-secondary)] text-lg">
         Meet us at a Cyberteq office near you or reach us electronically. Our experts will help you to choose the proper solution for your
         organization and answer all questions related to Cybersecurity, Digital Transformation & Telecommunication.
@@ -87,7 +116,7 @@ const ContactUs = ({ testRef }) => {
           will enable us to route your request to the appropriate person. You should receive a response within two days.
         </p> */}
         <div id="get-in-touch" className="flex flex-col md:flex-row gap-8 ">
-          <form action="" onSubmit={handleSubmit} noValidate className="flex-1 grid grid-cols-2 gap-4">
+          <form ref={contactForm} onSubmit={handleSubmit} noValidate className="flex-1 grid grid-cols-2 gap-4">
             <div className="form-control">
               <label htmlFor="name" className="form-label">
                 your name
@@ -174,7 +203,12 @@ const ContactUs = ({ testRef }) => {
               />
               <div className="error">{errors?.description}</div>
             </div>
-            <input type="submit" value="Send Message" className=" cursor-pointer col-span-2 btn-primary" onClick={validate} />
+            <input
+              type="submit"
+              value={loading ? "Sending..." : "Send Message"}
+              className=" cursor-pointer col-span-2 btn-primary"
+              disabled={loading}
+            />
           </form>
           <div className="md:flex-1 bg-slate-200 overflow-hidden h-96">
             <iframe
@@ -191,6 +225,16 @@ const ContactUs = ({ testRef }) => {
           </div>
         </div>
       </div>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={true}
+        closeOnClick
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </section>
   )
 }

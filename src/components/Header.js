@@ -2,7 +2,7 @@ import { Link } from "react-scroll"
 import { useRef, useEffect } from "react"
 const Header = () => {
   const heroImage = useRef()
-  useEffect(() => {
+  // useEffect(() => {
     // console.log("🚀 ~ file: Header.js:5 ~ Header ~ heroImage:", heroImage)
     // const showImage = () => {
     //   heroImage.current.style.opacity = 1
@@ -16,7 +16,7 @@ const Header = () => {
     // return () => {
     //   heroImage.current.removeEventListener("load", showImage)
     // }
-  }, [])
+  // }, [])
   return (
     <section id="hero" className="bg-gray-100 ">
       <div className="container flex flex-col md:flex-row gap-5 items-center pr-4 py-14 pt-20 mx-auto">
@@ -35,7 +35,10 @@ const Header = () => {
             // style={{ opacity: 0 }}
             src="/img/stock/twopeople.jpg"
             alt=""
-            className="w-full h-full object-cover transition-opacity"
+            className="w-full h-full object-cover"
+            // onLoad={() => {
+            //   heroImage.current.style.opacity = 1
+            // }}
           />
         </div>
       </div>

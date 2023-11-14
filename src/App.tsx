@@ -11,7 +11,6 @@ const App = () => {
   // const methodologypage = location.pathname === "/methodology"
   // document.documentElement.style.scrollBehavior = methodologypage ? "smooth" : "auto"
 
-  const testRef = useRef()
 
   return (
     <div className="overflow-x-hidden">

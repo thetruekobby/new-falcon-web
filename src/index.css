@@ -23,7 +23,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-section{
+section {
   @apply min-h-[calc(100vh-var(--nav-height))];
 }
 section,
@@ -164,4 +164,8 @@ footer * {
 
 .mobile-nav.show {
   transform: translate(0);
+}
+
+input[type="submit"]:disabled {
+  @apply cursor-not-allowed opacity-80 bg-black hover:bg-black;
 }
